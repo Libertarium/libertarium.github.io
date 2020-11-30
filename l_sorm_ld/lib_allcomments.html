@@ -1,0 +1,991 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/l_sorm_ld/lib_allcomments by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 16:30:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    К разработке криптопротоколов аудита
+					- К разработке криптопротоколов аудита
+					- К разработке криптопротоколов аудита
+					- Криптоаудит СОРМ-2
+					- Регулирование и экономика СОРМ
+					- Фонд электронной границы
+				- Московский Либертариум
+  </title>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="../libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : 'l_sorm_ld',
+			template_id : 'lib_allcomments',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="l_sorm_ld" class="lib_allcomments ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+    <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td align="left" bgcolor="#E0E0E0">
+    <table width="200"  border="0" cellspacing="0" cellpadding="0" height="62" bgcolor="#EEEEEE">
+    <tr>
+      <td height="21" align="center" class="date">27 август 2020</td>
+      <td rowspan=3><img width="4" alt="" src="http://libertarium.ru/pictures/lib_design_lib/back2.gif" class="db" height="65" border="0"/></td>
+    </tr>
+    <tr>
+      <td height="6" bgcolor="#0A537C"><img width="196" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="6" border="0"/></td>
+    </tr>
+    <tr>
+      <td height="35">
+        <form enctype="application/x-www-form-urlencoded" action="http://libertarium.ru/libertarium/lib_search" style="margin:5px;padding:0" method="POST"><input value="free" name="__form_auth" type="hidden"/>
+          <input align="absmiddle" name="SEARCHFOR" style="width:155px" type="text" class="formField" size="10"/>
+          <input type=image src="http://libertarium.ru/pictures/lib_design_lib/search.gif" width=21 height=17 hspace=0 vspace=0 border=0 alt="Поиск" name=FIND align=absmiddle>
+        </form>
+      </td>
+    </tr>
+    </table>
+  </td>
+  <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="../index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="../index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr bgcolor="#105080">
+    <td width="200" class="menu1" align="center">
+			<span class="userinfo">Пользователь:</span>
+				<span id="authorIdLink">инкогнито</span>
+				<a href="cms_login.html">[login]</a>
+    </td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="21" border="0"/></td>
+    <td width=100% colspan=2 class="menu1" style="padding-right: 30px" align="right">
+      <a href="../libertarium/cms_preferences.html">настройки</a> |
+      <a href="../libertarium/lib_sitemap.html">карта сайта</a> |
+      <a href="../libertarium/lib_statistics.html">статистика</a> |
+      <a target="_blank" href="../libertarium/feed_rss2"><img width="36" alt="" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/xml.gif" height="14" border="0"/></a>
+    </td>
+  </tr>
+  <tr bgcolor="#EEEEEE">
+    <td colspan=3><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+  </tr>
+  <tr bgcolor="#7E0001">
+    <td width="200"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td width="100%" colspan=4><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+    <td valign=top width=200>
+      <div class="menuHeader"><a href="../libertarium/lib_sitemap.html">Проекты</a></div>
+      <table width="200" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../libtheory.html" title="Ряд исследовательских микропроектов, посвященных стыковке  либертарианского мировоззрения и реалий сегодняшней стремительно &quot;цифризующейся&quot; жизни.">Теория свободы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../eff.html" title="Активизм, аналогичный деятельности американской http://eff.org/ -- привнесение цивилизации в дикую жизнь электроного приграничья. Обеспечение Свободы в Интернете -- свободы слова (нет госцензуре), свободы применению сильного крипто, свободы от государственной прослушки (СОРМ) и т.д.">Фонд электронной границы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../deregul.html" title="Государство должно уйти из экономики. Политики это уже хорошо осознают, и дерегулирование сегодня победно шагает по планете, касаясь даже самых &quot;священных&quot; отраслей -- &quot;естественных монополий&quot;.">Дерегулирование</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../intprop.html" title="Рынок интеллектуальной собственности относится к &quot;изобретенным&quot; (invented) человечеством рынкам. Отнюдь не все либертарианцы считают, что можно владеть и торговать интеллектуальной собственностью. Возникают новые -- криптографические -- формы защиты изобретений, авторских работ, торговых марок. Коренным образом меняется соответствующее законодательство -- по мере того, как все яснее невозможность применения правопринуждения к многочисленным нарушителям сегодняшнего правового режима.">Интеллектуальная собственность в цифровом будущем</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../party.html" title="Проектирование партии нового типа, близкой идеологически к либертарианским партиям Запада, но более приближенной к реалиям цифрового будущего. В данный момент партийное строительство ведется в режиме проектирования самой партии, но  вполне возможен переход от чистого &quot;теоретизирования&quot; к реальным действиям по выдвижению и поддерки кандидатов от Партии свободы на выборы различных уровней.">Партия свободы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../partners.html" title="Рубрики в других сетевых и несетевых изданиях, которые ведет Либертариум.">Либертариум в других изданиях</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../library.html" title="Cамое большое в Сети русскоязычное cобрание книг и статей либертарианской направленности (насколько эта направленность возможна в сегодняшней России). Представлены книги и статьи Мизеса, Хайека, Найшуля, Капелюшникова, Львина, Левенчука, Пескина, Сапова, несколько сборников, а также отдельные статьи разных авторов.">Библиотечка Либертариума</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../frontier.html" title="Цифровое будущее стремительно наступает. Идеи, от которых захватывает дух. Футурология, экстропианство.">ФутуроФронтир</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../boutique.html" title="Обсуждаются современные бизнес-модели, связанные с управлением понимания потребительской &quot;пользы&quot;. Примером являются механизмы моды, ассоциирования некоторых моделей с престижными и т.д.">Управление потребителями: бутикизация экономики</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../intelprop.html" title="">Идеология &quot;интеллектуальной собственности&quot;</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../52136.html" title="">Экономика творчества</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sk_ru.html" title="Материалы Свободного Кабинета (официальный журнал -- http://community.livejournal.com/sk_ru/).">Свободный Кабинет</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../liberalcharter.html" title="Страницы союза &quot;Либеральная Хартия&quot;">Союз &quot;Либеральная Хартия&quot;</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="../eff.html" title="Активизм, аналогичный деятельности американской http://eff.org/ -- привнесение цивилизации в дикую жизнь электроного приграничья. Обеспечение Свободы в Интернете -- свободы слова (нет госцензуре), свободы применению сильного крипто, свободы от государственной прослушки (СОРМ) и т.д.">Фонд электронной границы</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../eff_org.html" title="Список угроз, общие вопросы активизма, организация работы по защите сетевых прав и свобод и т.д.">Фонд электронной границы: общие вопросы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../blueribbon.html" title="Фактически, три разных темы: 1. Отсутствие государственной цензуры., 2. Свобода фильтрации контента (как контент-, так и интернет-) провайдерами. 3. Отсутствие лицензирования для сайтов и страничек, аналогичного лицензированию по Закону о СМИ.">Свобода слова в Интернете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm.html" title="Обсуждение проблем предлагаемой ФСБ неконституционной модификации СОРМ (системы оперативно-розыскных мероприятий) в глобальных компьютерных сетях. Основная цель -- не допустить, чтобы &quot;прослушка&quot; велась бесконтрольно, без предъявления провайдерам решений суда.">Регулирование и экономика СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../crypto.html" title="Все правительства мира хотят ограничить свободное использование сильного крипто. Но это у чиновников получается все хуже и хуже...">Свободное использование сильного крипто</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../runames.html" title="Очень много желающих монополизировать выделение доменных имен в Интернете -- и чиновники здесь, как всегда, не последние в очереди.">Выделение доменных имен в Рунете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../runetregul.html" title="Саморегулирование в Рунете уверенно делает первые шаги. Государство не менее уверенно пытается перехватить инициативу. Создаются новые организации, виртуальные клубы, &quot;доски позора&quot;, тусовки, лицензирующие органы и т.д...">Саморегулирование в Рунете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../putting.html" title="28 декабря 1999г. состоялась встреча так называемой &quot;интернет-общественности&quot; с премьер-министром Путиным, министром связи и информатизации Рейманом и министром печати и информации Лесиным. Обсуждалось возможное регулирование Рунета.">Встреча интернет-общественности с Путиным 28 декабря 1999 года</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../gov_regul.html" title="Проекты Федеральных Законов РФ проходят три чтения в Госдуме, утверждение в Совете Федерации и подписываются Президентом РФ. Уже появились тексты, которые готовятся пройти этот путь...">Законодательные инициативы по регулированию российского сегмента сети Интернет</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../infocustoms.html" title="Если информацию считать товаром, то обязательно найдутся желающие контролировать любую информацию, проходящую через границу &ndash; даже если это и является техническим абсурдом. Цензура более напоминает птичку Феникс, чем можно ожидать.">Информационная таможня</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="../sorm.html" title="Обсуждение проблем предлагаемой ФСБ неконституционной модификации СОРМ (системы оперативно-розыскных мероприятий) в глобальных компьютерных сетях. Основная цель -- не допустить, чтобы &quot;прослушка&quot; велась бесконтрольно, без предъявления провайдерам решений суда.">Регулирование и экономика СОРМ</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_bsc.html" title="ФСБ требует уcтановки СОРМ-2 у интернет-провайдера в г.Волгоград. Интернет провайдер оказывает сопротивление незаконным требованиям и испытывает все прелести силового давления.">Случай с &quot;Баярд-Славия Коммуникейшнс&quot; (г. Волгоград)</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sormlawdocs.html" title="Нормативные правовые акты по СОРМ">Нормативные документы по СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_develop.html" title="Технические требования по СОРМ-2 и документы, относящиеся к их разработке">Технические требования по СОРМ-2 и ход их разработки</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_control.html" title="В силовых органах работают отнюдь не ангелы. Случаи злоупотреблений со стороны работников силовиков не так уж редки.">Почему за силовыми органами нужен контроль?</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_law.html" title="СОРМ-2 порожден в том числе из-за несовершенства российского законодательства. Но существующих законов, похоже, хватает для предотвращения негативных последствий от внедрения СОРМ для общества.">О конституционности СОРМ и проблемы законодательства</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_audit.html" title="Предлагаемые изменения к техническим требованиям СОРМ-2, обеспечивающим контроль за деятельностью силовиков. Подход связан с применением криптотехнологий.">Криптоаудит СОРМ-2</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_crypto_esc.html" title="От СОРМ очень легко защититься применением криптотехнологий.">Криптоуход от СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sorm_spy.html" title="Как я понимаю, эти материалы констатируют, что спецслужбы всех стран имеют одинаковые повадки. Россия, конечно, не будет исключением. Интересно, как &quot;шалости&quot; спецслужб влияют на экспортный потенциал своих стран? Или для российских спецслужб &quot;шалить&quot; становится возможным из-за практического отсутствия экспорта?">Электронный бизнес-шпионаж спецслужб</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../l_sorm_95.html" title="Свидетельства провайдеров о том, как к ним приходили из силовых органов и пытались нарушить законодательство.">СОРМ как он есть: глазами очевидца</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sormactivism.html" title="Активизм (митинги, конференции, петиции и т.д.) по поводу СОРМ">Активизм по проблеме СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sormpress.html" title="">Пресса о СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../sormbanners.html" title="Фольклор о СОРМ">Баннеры, карикатуры, слоганы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="../privacy.html" title="Защита персональных данных. Приватность в компьютерных сетях. Приватность и СОРМ.">Прайвеси</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="../sorm_audit.html" title="Предлагаемые изменения к техническим требованиям СОРМ-2, обеспечивающим контроль за деятельностью силовиков. Подход связан с применением криптотехнологий.">Криптоаудит СОРМ-2</a>
+  </div>
+          <div class="pageDelimiter"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></div>
+          <img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="15" border="0"/><br>
+          <table border="0" cellspacing="0" cellpadding="5" align="center">
+          <tr><td><img vspace="3" width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner1.gif" height="31" border="1>"" hspace="0" class="db"/></td></tr>
+          <tr><td><a href="http://www.adt.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner2.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://www.eurasia.msk.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner3.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://www.communiware.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner4.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://counter.rambler.ru/top100/"><img src="../../kraken.rambler.ru/top100/banner-88x31-rambler-gray2.gif" width="88" height="31" border="0"></a><img width="1" src="../../counter.rambler.ru/index.html" height="1" alt=""></td>
+          <tr><td>
+            <!-- SpyLOG v2 f:0211 -->
+            <script language="javascript"> 
+            u="u916.87.spylog.com";d=document;nv=navigator;na=nv.appName;p=0;j="N"; 
+            d.cookie="b=b";c=0;bv=Math.round(parseFloat(nv.appVersion)*100); 
+            if (d.cookie) c=1;n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random(); 
+            z="p="+p+"&rn="+rn+"&c="+c;if (self!=top) {fr=1;} else {fr=0;} 
+            sl="1.0";</script><script language="javascript1.1"> 
+            pl="";sl="1.1";j = (navigator.javaEnabled()?"Y":"N");</script>
+            <script language=javascript1.2> 
+            sl="1.2";s=screen;px=(n==0)?s.colorDepth:s.pixelDepth; 
+            z+="&wh="+s.width+'x'+s.height+"&px="+px; 
+            </script><script language=javascript1.3> 
+            sl="1.3"</script><script language="javascript"> 
+            y="";y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+            y+="<img src='http://"+u+"/cnt?"+z+"&j="+j+"&sl="+sl+ 
+            "&r="+escape(d.referrer)+"&fr="+fr+"&pg="+escape(window.location.href); 
+            y+="' border=1 width=88 height=31 alt='SpyLOG'>"; 
+            y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript>
+            <a href="http://u916.87.spylog.com/cnt?f=3&amp;p=0" target=_blank>
+            <img src="https://openstat.net/digits?p=0" alt='SpyLOG' border='0' width=88 height=31 >
+            </a></noscript><script language="javascript1.2"><!-- 
+            if(!n) { d.write("--"+">"); }//--></script>
+            <!-- SpyLOG -->
+          </td></tr>
+          </table>
+          <img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/>
+        </td>
+      </tr>
+      </table>
+    </td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+<a href="../l_sorm_ld.html">К разработке криптопротоколов аудита</a> / Все комментарии
+</h1>
+		<div class="icons">
+	<a href="lib_allmaterials.html">
+		<img width="21" alt="материалы" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/materials.gif" title="материалы" height="17" border="0"/>
+	</a>
+	<a href="lib_allcomments.html">
+		<img width="21" alt="комментарии" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/replics.gif" title="комментарии" height="17" border="0"/>
+	</a>
+				<a href="cms_subscribe.html">
+					<img width="21" alt="подписка" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/subscribe.gif" title="подписка" height="17" border="0"/>
+				</a>
+	<a target="_blank" href="lib_allcomments97a7.html?PRINT_VIEW=YES">
+		<img width="21" alt="вид для печати" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/print.gif" title="вид для печати" height="17" border="0"/>
+	</a>
+		</div>
+</div>
+	<div class="pageBlock">
+		<h2>Комментарии (5)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a> |
+				<b><a href="lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../ailev.html">Левенчук Анатолий</a>,
+    20.07.1998<br/>в ответ на:
+        <a href="../l_sorm_ld.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 20.07.1998)
+	</div>
+	<div class="text">
+		<p>&gt; Комментарий М.Отставнова. Хамский по форме и
+подленький по содержанию.<br />
+&gt; Хамский  - потому что с матом и по тону
+оскорбительный оппонентам.<br />
+С матом - это он спросил разрешения, я разрешил
+(для точности выражения его мысли). Тон, конечно,
+оскорбительный для оппонентов (хотя ни одного
+имени оппонента пока неизвестно, оскорбляется
+лишь &quot;мундир&quot; :)- этого он, как я понимаю, и
+добивается. <br />
+<br />
+&gt; Подленький - потому что подстрекает к
+нарушению закона (не <br />
+&gt; нравится он ему -<br />
+&gt; хорошо, но для этого надо закон менять, а не
+подбивать людей <br />
+&gt; на нарушение<br />
+&gt; закона, т.к. за это подбитые отвечать будут).
+Ссылки на то, <br />
+&gt; что у каждого<br />
+&gt; должна быть своя голова на плечах - не
+проходят, просто из <br />
+&gt; соображений общей<br />
+&gt; морали.<br />
+Категорически не согласен - в стране большинство
+чиновников ФАПСИ трактуют закон (как я понимею,
+имеется ввиду пакет норм по крипто)
+запретительно, а ВСЕ ОСТАЛЬНЫЕ - РАЗРЕШИТЕЛЬНО,
+только в разговорах _слегка боятся_. Поэтому я не
+считаю, что закон где-то нарушается. Кроме того -
+напомню дискуссию насчет правозаконности и
+законности (это к вопросу о легитимности актов
+диктаторов, которые изданы вполне легитимным
+путем вполне легитимно выбранными диктаторами).
+Это очень интересная дискуссия, и на сайте
+&quot;борьба за крипто&quot; я ее приведу - но пока не
+на сайте про СОРМ.<br />
+<br />
+&gt; <br />
+&gt; Из-за того, что можно было ожидать таких
+откликов, видимо все <br />
+&gt; и молчат - не<br />
+&gt; хотят попадать в одну компанию с такими.
+Интернет, конечно, <br />
+&gt; среда открытая,<br />
+&gt; цензуры тут нет, и люди &quot;голосуют ногами&quot; -
+не участвуют в <br />
+&gt; обсуждениях, где<br />
+&gt; можно попасть в такую компанию. <br />
+Ну, я так не думаю - сайту месяц через четыре дня, и
+на сайте полно серьезных материалов (возьмите
+хотя бы мои &quot;Вопросы&quot;). Но обсуждать-то
+просто некому - хотя сайт в рэмблеровской
+политике в среднем за месяц занимает пятое место
+(сразу по популярности после Парламента Украины
+:). <br />
+<br />
+&gt;Кстати, то же и с <br />
+&gt; конференцией на ту же тему<br />
+&gt; в Роците, которую затеял Отставнов. Думаю, дело
+тут не в страхе, а в<br />
+&gt; элементарной брезгливости.<br />
+Я не знаю, что там с конференцией в РОЦИТе - не
+видел ни разу. Про СОРМ довольно бойко обсуждают,
+у меня по три-четыре письма в день - только
+содержания в них, увы, мало. Комментарий
+Отставнова ценен тем, что там есть какие-никакие
+мысли. А в большинстве других писем - не мысли, а
+вопли и сопли. Пресса просто тупо переписывает
+содержание сайта. Обсуждение ведется не только
+на моем сайте (где, собственно, и места для
+дискусси нет) - но и в провайдерских списках
+рассылки. Так там тоже жалобы на молчание
+&quot;провайдерской массы&quot; :) Хотя причины этого
+показаны в моей статье &quot;Молчание
+провайдеров&quot;.<br />
+<br />
+Кстати, я до сих пор ожидаю содержательных
+комментариев к документам (теперь уже другим
+документам - оставляющим максимальный произвол
+местным отделениям ФСБ). <br />
+<br />
+&gt; <br />
+&gt; Кстати, осмелился бы М.О. в таком тоне говорить
+с живыми <br />
+&gt; людьми? Мог бы и<br />
+&gt; получить по физиономии.<br />
+Ну, он консистентен, и свою точку зрения меняет
+только под воздействием аргументов. Хотя в
+устной речи Максим ругается очень редко, он
+предпочитает фиксировать резкие мысли
+письменно, чтобы можно было потом это обсуждать и
+комментировать. <br />
+Тут получается двоякий эффект: резкая форма
+может привлечь к содержанию способную молодежь,
+но оттолкнуть от содержания &quot;солидную
+публику&quot;. Но солидная публика молчит по поводу
+СОРМовского содержания, выраженного в любой
+форме. Я и опубликовал его комментарий - вдруг
+чего в этом молчаливом мире изменится? :)<br />
+<br />
+С удовольствием почитал бы содержательную
+критику комментария Максима - я лично считаю, что
+_содержательно_ Максим прав почти по всем
+пунктам, и мне даже не хочется продолжать
+работать над своей статьей про криптопротоколы
+аудита (хотя тема &quot;горячая&quot;). То есть
+работать я буду - но для полянки ФКЦБ России,
+Банка России и финансовых сервисов. А про СОРМ и
+крипто я гораздо более согласен с Отставновым -
+особенно после того, как почитал зарубежные
+материалы про повадки тамошних рыцарей плаща и
+кинжала в отношении CALEA и Clipper.
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../dstar.html">Дмитрий Старовойтов</a>,
+    20.07.1998<br/>в ответ на:
+        <a href="../5364.html">комментарий</a>
+        (<a href="../ailev.html">Левенчук Анатолий</a>, 20.07.1998)
+	</div>
+	<div class="text">
+		<p>
+&gt;&gt; Комментарий М.Отставнова. Хамский по форме и
+подленький по содержанию.<br />
+&gt;&gt; Хамский  - потому что с матом и по тону
+оскорбительный оппонентам.<br />
+&gt;С матом - это он спросил разрешения, я разрешил
+(для точности выражения его<br />
+мысли). Тон, конечно, оскорбительный для
+оппонентов<br />
+&gt;(хотя ни одного имени оппонента пока
+неизвестно, оскорбляется лишь &quot;мундир&quot;<br />
+:)- этого он, как я понимаю, и добивается.<br />
+&gt;<br />
+насчет хамского я не согласен - мог бы и точками
+заменить. Кроме того, любую<br />
+мысль можно и без мата выразить.<br />
+Кроме того, всегда оскорбляется не мундир, а
+конкретные люди.<br />
+И еще. Как раз именно это я и хотел сказать, что
+сам тон, когда кого-то<br />
+хотят оскорбить, для большинства людей
+неприемлем. Получается что-то вроде<br />
+&quot;электронного братка&quot; с пальцАми и пр.<br />
+<br />
+&gt;&gt; Подленький - потому что подстрекает к
+нарушению закона (не<br />
+&gt;&gt; нравится он ему -<br />
+&gt;&gt; хорошо, но для этого надо закон менять, а не
+подбивать людей<br />
+&gt;&gt; на нарушение<br />
+&gt;&gt; закона, т.к. за это подбитые отвечать будут).
+Ссылки на то,<br />
+&gt;&gt; что у каждого<br />
+&gt;&gt; должна быть своя голова на плечах - не
+проходят, просто из<br />
+&gt;&gt; соображений общей<br />
+&gt;&gt; морали.<br />
+&gt;Категорически не согласен - в стране
+большинство чиновников ФАПСИ трактуют<br />
+закон (как я понимею, имеется ввиду пакет норм по<br />
+&gt;крипто) запретительно, а ВСЕ ОСТАЛЬНЫЕ -
+РАЗРЕШИТЕЛЬНО, только в разговорах<br />
+_слегка боятся_.<br />
+<br />
+А я не про это. Закон о СОРМ - это серьезно, это
+попадаешь сразу под дачу<br />
+свидетельских показаний и не с ФАПСИшниками,
+которые оперработой не<br />
+занимаются, а с настоящими следаками, у к-рых и
+менталитет совсем другой и<br />
+на мир они смотрят сквозь прицел. Я-то с ними имел
+счастье общаться, причем<br />
+знал, что прав абсолютно, и то... А они такие
+поведение  (послать в ж..)<br />
+будут трактовать однозначно как уклонение от
+дачи свидетельских показаний,<br />
+за что полагается статья. За одну подобную фразу
+можно сразу загреметь на<br />
+&quot;изменение меры пресечения по подозрению в
+соучастии организованной<br />
+преступности..&quot; и т.п. Инфантилизм это со
+стороны Максима или подлость, одно<br />
+из двух. Живем мы в реальном государстве, к
+сожалению.<br />
+<br />
+Поэтому я не считаю, что закон<br />
+<br />
+&gt;где-то нарушается. Кроме того - напомню
+дискуссию насчет правозаконности и<br />
+законности (это к вопросу о легитимности актов<br />
+&gt;диктаторов, которые изданы вполне легитимным
+путем вполне легитимно<br />
+выбранными диктаторами). Это очень интересная
+дискуссия, и<br />
+&gt;на сайте &quot;борьба за крипто&quot; я ее приведу -
+но пока не на сайте про СОРМ.<br />
+&gt;<br />
+<br />
+Дискуссия - то интересная, но весь антураж
+Максима - сайт забугорный, фотка<br />
+с полосой на глазах, и призывы к неисполнению
+закона - все это напоминает<br />
+подстрекательство детское (съешь варенье, мама
+все равно не спохватится)<br />
+<br />
+&gt;&gt;<br />
+&gt;&gt; Из-за того, что можно было ожидать таких
+откликов, видимо все<br />
+&gt;&gt; и молчат - не<br />
+&gt;&gt; хотят попадать в одну компанию с такими.
+Интернет, конечно,<br />
+&gt;&gt; среда открытая,<br />
+&gt;&gt; цензуры тут нет, и люди &quot;голосуют
+ногами&quot; - не участвуют в<br />
+&gt;&gt; обсуждениях, где<br />
+&gt;&gt; можно попасть в такую компанию.<br />
+&gt;Ну, я так не думаю - сайту месяц через четыре
+дня, и на сайте полно<br />
+серьезных материалов (возьмите хотя бы мои
+&quot;Вопросы&quot;).<br />
+<br />
+а еще?<br />
+Но<br />
+&gt;обсуждать-то просто некому - хотя сайт в
+рэмблеровской политике в среднем<br />
+за месяц занимает пятое место (сразу по
+популярности<br />
+&gt;после Парламента Украины :).<br />
+&gt;<br />
+<br />
+Вот почему некому? В Инете масса народа.<br />
+<br />
+&gt;&gt;Кстати, то же и с<br />
+&gt;&gt; конференцией на ту же тему<br />
+&gt;&gt; в Роците, которую затеял Отставнов. Думаю,
+дело тут не в страхе, а в<br />
+&gt;&gt; элементарной брезгливости.<br />
+&gt;Я не знаю, что там с конференцией в РОЦИТе - не
+видел ни разу. Про СОРМ<br />
+довольно бойко обсуждают, у меня по три-четыре
+письма в<br />
+&gt;день - только содержания в них, увы, мало.<br />
+<br />
+<br />
+Все такого же инфоантильного уровня, уверен. Я
+читаю ФИДО, там есть<br />
+несколько конференций по разным темам, в том
+числе и по криптографии. А<br />
+больше всего мне напоминает это позицию нек-рых
+фидошников по поводу<br />
+отношений с милицией (есть там ряд тем подобного
+рода). Что делать, если<br />
+милиционеры на улице начинаю интересоваться, что
+у тебя в карманах? Это,<br />
+кстати, незаконно. Так вот, там рекомендуют особо
+умные требовать составить<br />
+протокол, ссылаться на закон о милиции и пр. В
+половине случаев, я уверен,<br />
+такие рекомендации приведут к БОЛЬШИМ проблемам
+у следующих им. Права качать<br />
+(пардон за грубость) уметь надо, этому бы учил кто
+нибудь.<br />
+<br />
+<br />
+Комментарий Отставнова ценен тем, что там есть
+какие-никакие мысли. А в<br />
+большинстве<br />
+&gt;других писем - не мысли, а вопли и сопли.<br />
+<br />
+Не заметил, пардон. Есть абсолютное незнание
+ситуации и большое желание<br />
+КОГО_НИБУДЬ втравить в конфликт с властями.<br />
+<br />
+Пресса просто тупо переписывает содержание
+сайта. Обсуждение ведется не<br />
+только на моем<br />
+&gt;сайте (где, собственно, и места для дискусси
+нет) - но и в провайдерских<br />
+списках рассылки. Так там тоже жалобы на молчание<br />
+&gt;&quot;провайдерской массы&quot; :) Хотя причины
+этого показаны в моей статье<br />
+&quot;Молчание провайдеров&quot;.<br />
+&gt;<br />
+&gt;Кстати, я до сих пор ожидаю содержательных
+комментариев к документам<br />
+(теперь уже другим документам - оставляющим
+максимальный<br />
+&gt;произвол местным отделениям ФСБ).<br />
+&gt;<br />
+&gt;&gt;<br />
+<br />
+Честно говоря, на фоне этого желание писать
+какие-нибудь комментарии<br />
+пропало - не хочу я попадать в одну компанию с
+такими материалами. Либо<br />
+конструктивный разговор, либо базарная ругань -
+от последнего увольте.<br />
+<br />
+<br />
+&gt;&gt; Кстати, осмелился бы М.О. в таком тоне
+говорить с живыми<br />
+&gt;&gt; людьми? Мог бы и<br />
+&gt;&gt; получить по физиономии.<br />
+&gt;Ну, он консистентен, и свою точку зрения меняет
+только под воздействием<br />
+аргументов. Хотя в устной речи Максим ругается
+очень<br />
+&gt;редко, он предпочитает фиксировать резкие
+мысли письменно, чтобы можно было<br />
+потом это обсуждать и комментировать.<br />
+<br />
+На заборе так писать надо. В журнале ему слабО
+такими словами писать? Если<br />
+бы со мной в таком тоне говорили бы, то минимум
+либо я ушел бы, либо выгнал<br />
+бы взашей (смотря где место разговора было бы).
+Такая форма предполагает<br />
+изначальное неуважение к аудитории и/или к
+собеседнику.<br />
+<br />
+&gt;Тут получается двоякий эффект: резкая форма
+может привлечь к содержанию<br />
+способную молодежь, но оттолкнуть от содержания<br />
+&gt;&quot;солидную публику&quot;. Но солидная публика
+молчит по поводу СОРМовского<br />
+содержания, выраженного в любой форме.<br />
+<br />
+Поэтому и не пишет.<br />
+<br />
+Я и опубликовал его<br />
+&gt;комментарий - вдруг чего в этом молчаливом мире
+изменится? :)<br />
+&gt;<br />
+&gt;С удовольствием почитал бы содержательную
+критику комментария Максима - я<br />
+лично считаю, что _содержательно_ Максим прав
+почти по<br />
+&gt;всем пунктам, и мне даже не хочется продолжать
+работать над своей статьей<br />
+про криптопротоколы аудита (хотя тема
+&quot;горячая&quot;). То<br />
+&gt;есть работать я буду - но для полянки ФКЦБ
+России, Банка России и<br />
+финансовых сервисов. А про СОРМ и крипто я
+гораздо более<br />
+&gt;согласен с Отставновым - особенно после того,
+как почитал зарубежные<br />
+материалы про повадки тамошних рыцарей плаща и
+кинжала в<br />
+&gt;отношении CALEA и Clipper.
+</p>
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../ailev.html">Левенчук Анатолий</a>,
+    20.07.1998<br/>в ответ на:
+        <a href="../5368.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 20.07.1998)
+	</div>
+	<div class="text">
+		<p>
+&gt; насчет хамского я не согласен - мог бы и
+точками заменить. <br />
+<br />
+Приведу письмо Отставнова по поводу
+санкционирования публикации его текста: <br />
+<br />
+-------------------------------------------------------------<br />
+-----Original Message-----<br />
+From: Maksim Otstavnov [mailto:maksim@volga.net] <br />
+Sent: Saturday, July 18, 1998 8:24 PM<br />
+To: Anatoly Levenchuk<br />
+Subject: RE: audit.html<br />
+<br />
+&gt; Я счел, что так торжественно озаглавленный
+текст - это для публикации, и опубликовал.<br />
+<br />
+Дело хозяйское. Но там два не совсем цензурных
+слова; если это противоречит <br />
+политике Либертариума, санкционирую замену
+обоих на @#$%<br />
+<br />
+Спасибо,<br />
+<br />
+-- Maksim Otstavnov  http://www.ice.ru/otstavnov/<br />
+--   - editor, Compunomika weekly<br />
+--   - chief, Labs of Civil &amp; Financial Crypto<br />
+--   - maintainer of The Russian PGP HomePage<br />
+-------------------------------------------------------------<br />
+Я предложенную Отставновым замену производить
+не стал, как уже писал.<br />
+<br />
+Про содержательные материалы на сайте:<br />
+<br />
+Я на сайте пытался собрать материалы (кроме
+прессы - в этом разделе важен &quot;факт выхода&quot;),
+по которым можно развернуть _содержательную_
+дискуссию. Кроме &quot;16К вопросов&quot;, есть
+институциональный анализ Отставнова, &quot;вопросы
+дня&quot;, различные отклики провайдеров и
+правозащитников (для тех, кто хочет составить
+представление о &quot;среднем&quot; уровне
+обсуждения), Рубрикатор, юридические наметки
+Волчинской (хотя эти наметки и критикуются).
+Впрочем, есть и мой раскритикованный Отставновым
+ход на криптопротоколы аудита - дальше там нужно
+было бы описать он-лайн получение санкций,
+ведение подписанного и доступного для проверки
+аудитором протокола съема информации... Но
+Отставнов меня пока убедил - это можно
+разрабатывать для профсообществ, а для &quot;просто
+силовых&quot; организаций это несерьезно.<br />
+<br />
+А обсуждать серьезно практически не с кем - в
+Инете масса народа, а людей для обсуждения пока
+не выявилось. Вот, Вас ожидал, но не случилось :(<br />
+<br />
+&gt; Честно говоря, на фоне этого желание писать
+какие-нибудь комментарии<br />
+&gt; пропало - не хочу я попадать в одну компанию с
+такими <br />
+&gt; материалами. Либо<br />
+&gt; конструктивный разговор, либо базарная ругань
+- от последнего увольте.<br />
+<br />
+Ну, за прошедший почти месяц - можно было бы и
+написать... А появившаяся ТОЛЬКО ЧТО &quot;базарная
+ругань&quot;, как я понимаю - это СВЕЖИЙ текст
+Отставнова, который ругает, насколько я понимаю,
+_конкретно меня_? Я бы квалифицировал подобный
+отказ от разговора как _уход по форме от
+содержания_ :))) Но за прошедший месяц я убедился,
+что и _форма_ обсуждения никого не взволновала -
+увы, все молчат, потому что _содержательно_
+сказать нечего.<br />
+<br />
+Поэтому я и строю потихоньку сайт, некоторые люди
+его читают - и следущий тур дискуссий пройдет, как
+я понимаю, более содержательно. Критерий
+сайтостроительства у меня простой: побольше идей
+на единицу текста, дать материал для размышлений.
+Увы, я что-то ничего не слышал о _серьезных_
+обсуждениях, которые кто-то где-то ведет на тему
+СОРМ. Нигде нет разговоров про _базовые принципы_,
+иногда провайдеры обсуждают только _детали
+реализации_ :( <br />
+<br />
+Ну да ничего, через некоторое время появятся
+грамотные люди - и глянь, информация уже собрана в
+одном месте :)))<br />
+А проект этот (я глядел у американцев и немцев)
+длинный, каждые пару-тройку лет какое-нибудь
+скандальное обострение. Так что у меня даже нет
+ощущения, что работаю в корзину.
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../dstar.html">Дмитрий Старовойтов</a>,
+    24.07.1998<br/>в ответ на:
+        <a href="../5372.html">комментарий</a>
+        (<a href="../ailev.html">Левенчук Анатолий</a>, 20.07.1998)
+	</div>
+	<div class="text">
+		<p>
+позиция Отставнова мне напоминает попа Гапона -
+провокатора. Остается надеятся, что побудительные мотивы у него другие (и закончится по другому :)<br />
+<br />
+Кстати, насчет попа Гапона можно &quot;повесить&quot;
+на сайт - для разъяснения моей позиции.
+</p>
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_audit/lib_thread.html">К разработке криптопротоколов аудита</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    25.07.1998<br/>в ответ на:
+        <a href="../5373.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 24.07.1998)
+	</div>
+	<div class="text">
+		<p>
+Дмитрий:<br />
+перестаньте смешить публику, скажите лучше
+что-нибудь по делу. Тред про Отставнова скоро превысит тред по СОРМ по объему.<br />
+<br />
+BTW, переписка с Сергеем Леонтьевым дошла ровно до
+сферы Ваших интересов, насколько я их понимаю.
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr>
+    <td bgcolor="#7E0001"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+  <tr>
+    <td align="center" class="cop" bgcolor="#dedede"><a href="mailto:liberty@ice.ru">liberty@ice.ru</a></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="15" border="0"/></td>
+    <td align="center" class="cop" width="100%">Московский Либертариум, 1994-2020</td>
+  </tr>
+  <tr>
+    <td bgcolor="#0A557D"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/l_sorm_ld/lib_allcomments by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 16:30:46 GMT -->
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/5116/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Конкуренция в телекоммуникационном секторе
+					- Регулирование и экономика СОРМ
+					- Свободные телекоммуникации
+					- Фонд электронной границы
+					- Дерегулирование
+				- Московский Либертариум
+  </title>
+	<meta name="robots" content="noindex"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="../libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : '5116',
+			template_id : 'lib_allcomments',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="5116" class="lib_allcomments ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="../index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="../index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td bgcolor="#EEEEEE"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td></tr>
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+<a href="../5116.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> / Все комментарии
+</h1>
+</div>
+	<div class="pageBlock">
+		<h2>Комментарии (2)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> |
+				<b><a href="lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../dstar.html">Дмитрий Старовойтов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5116.html">комментарий</a>
+        (<a href="../maksim.html">Максим Отставнов</a>, 29.07.1998)
+	</div>
+	<div class="text">
+		<br />
+Хм. Стоимость такого решения - явно не годится.
+Более того, уже давно<br />
+обсуждался вопрос о создании телефона с
+смарт-картой как идентификатором,<br />
+платежным средством и пр. Это слишком
+дорогостоящее занятие как для АТС, так<br />
+и для абонентов. Кстати, (себе)стоимость звонка из
+автомата намного выше<br />
+стоимости звонка с стационарного телефона
+(обычного). Плюс ко всему, для<br />
+автоматов традиционно применялась трехпроводка
+с переполюсованием, почему се<br />
+йчас трудно (на старых) АТС идентифицировать
+автомат и почему есть отдельные<br />
+автоматы для межгорода.<br />
+<br />
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5118.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; Хм. Стоимость такого решения - явно не годится. Более того, уже давно<br />&gt; обсуждался вопрос о создании телефона с смарт-картой как идентификатором,<br />&gt; платежным средством и пр. Это слишком дорогостоящее занятие как для АТС, так<br />&gt; и для абонентов. <p>В стоимость уличного автомата входит физическая защита от вандализма (и от <br />хищения жетонов, если они физические). Payphone (телефон-автомат для <br />установки в офисе для посетителей) на карточке, выглядящий примерно как <br />обычный панасониковский или сименсовский аппарат, только с ридером, я видел <br />уже года два назад. Стоить он будет не сильно дороже обычного современного <br />телефона: добавить нужно мотороловский процессор за пять баксов плюс сам <br />ридер за десять (по оптовым ценам). Примерно так.</p><p>А солько стоит внедрение биллинговой системы - повременки для локальных <br />звонков на каждый номер?</p><p>&gt; Кстати, (себе)стоимость звонка из автомата намного выше стоимости звонка с<br />&gt; стационарного телефона (обычного). </p><p>Ну почему же тогда операторы автоматных сетей не посадят бабулек с обычными <br />стационарными телефонами? Бабулька-кассир уж точно ничего не стоит.</p><p>&gt; Плюс ко всему, для автоматов традиционно применялась трехпроводка с<br />&gt; переполюсованием, почему се йчас трудно (на старых) АТС идентифицировать<br />&gt; автомат и почему есть отдельные автоматы для межгорода.</p><p>Ну и что? Мало ли что где раньше традиционно применялось.
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  <tr><td align="center" class="cop">Московский Либертариум, 1994-2020</td></tr>
+  <tr><td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/5116/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:11 GMT -->
+</html>

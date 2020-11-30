@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/5183/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Конкуренция в телекоммуникационном секторе
+					- Регулирование и экономика СОРМ
+					- Фонд электронной границы
+					- Свободные телекоммуникации
+					- Дерегулирование
+				- Московский Либертариум
+  </title>
+	<meta name="robots" content="noindex"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="../libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : '5183',
+			template_id : 'lib_allcomments',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="5183" class="lib_allcomments ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="../index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="../index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td bgcolor="#EEEEEE"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td></tr>
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+<a href="../5183.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> / Все комментарии
+</h1>
+</div>
+	<div class="pageBlock">
+		<h2>Комментарии (1)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> |
+				<b><a href="lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    31.07.1998<br/>в ответ на:
+        <a href="../5183.html">комментарий</a>
+        (<a href="../npkmp.html">Сергей Нестерович</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		<br />&gt; &gt; &quot;Устройство, отвечающее этим требованиям&quot;, называется телефон-автомат<br />...<br />&gt; Массовое внедрение телефонов-автоматов в квартирах будет откровенно<br />&gt; непопулярным. Дело даже не в необходимости покупать жетончики, а в том, что<br />&gt; сейчас-то любые расчеты за повременку идут в кредит, а будут - по факту.<p>Кредит - важный и нужный инструмент, и обмен персональной информации на <br />предоставление кредита (в финансовом смысле - получение кредита под залог <br />репутации и дееспособности) - в некотором смысле может быть &quot;честной&quot; <br />операцией. А вот когда такую сделку делают принудительной, это другой вопрос.</p><p>&gt; &gt;&gt; А текущая правовая ситуация фактически вынуждает любую ГТС, которая вводит<br />&gt; &gt;&gt; в действие повременную оплату за телефон - иначе как прикажете вести<br />&gt; &gt;&gt; претензионную работу с абонентами? Единственный способ для ГТС обосновать<br />&gt; &gt;&gt; справедливость выставленного счета - предъявить абоненту список всех его<br />&gt; &gt;&gt; звонков.<br />&gt; &gt;Забавно. Все равно, как если бы я, в подтверждение того, что Вы мне должны,<br />&gt; &gt;предъявил бы Вам свою запись в своей записной книжке...</p><p>&gt; Эмпирический факт - это реально помогает в претензионной работе.<br />&gt; В конце концов Вас же не смушает, что банк ведет список расчетов, которые<br />&gt; прошли по Вашей кредитной карточке - если Вы будете возражать против<br />&gt; списываемой с Вашего счета суммы, начнется разбор полетов. </p><p>Там ситуация та же самая, она смущает и меня, и суды, и экспертов, и <br />владельцев банкоматных сетей/банки-эмитенты карточек. Записи ведутся, но <br />доказательством служить не могут. Я ссылался на работы Андерсона, проведенные <br />как раз по мотивам реальных дел. Именно эти факторы стоят за тем, что <br />процессинговые ассоциации активно инвестируют в смарт-карточные технологии <br />(насколько это оправданно, другой вопрос) и даже в бескарточные технологии.</p><p>Ситуация отягощена тем, что если в странах с нормальным состязательным<br />правосудием клиент неплохо защищен от фантомных транзакций, то у нас все<br />бремя доказательства того, что ты не верблюд, падает на клиента. Реально,<br />конечно, отбить спорную запись у банкира возможно, но путем неформальной<br />процедуры, что дорого как для клиента, так, в конечном счете, и для банкира.</p><p>Карточки - это хороший пример неадекватного протокола, вводящего нестрахуемые <br />риски.</p><p>&gt; Т.е. это ситуация, типичная для сферы, где товар отпускается в кредит.</p><p>Обратите внимание на появление несколько лет назад реквизитов клиента вплоть <br />до фотографии на <em>дебетовых</em> картах. Вот пример того, как инфраструктура, <br />созданная для одних целей, начинает использоваться для других.</p><p>&gt; &gt;&gt; Все хорошо, но техническая возможность создания таких устройств, приемлемых<br />&gt; &gt;&gt; по стоимости появилась совсем не давно.<br />&gt; &gt;Телефоны-автоматы существуют с 30-х гг., если я не ошибаюсь.<br />&gt; Телефон-автомат взламывается с использованием собcтвенного телефонного<br />&gt; аппарата с парой &quot;крокодилов&quot; на конце шнура. Кстати, инкассацию Вы как<br />&gt; собираетесь по квартирам проводить? Даже если Вы модемы будете встраивать в<br />&gt; квартирные телефоны-автоматы - стоимость всего удовольствия будет на уровне<br />&gt; $150 за линию. А АПУС стоит $3-10.</p><p>Стоимость всего этого удовольствия ~ +$30 на линию при современных масштабах <br />производства соответствующих компонентов. Об инкассации вопрос не стоит, если <br />не использовать физические жетоны.</p><p>&gt; &gt;&gt; Кроме того, подавляющее большинство претензий к расчетам не имеет, в<br />&gt; &gt;&gt; основном претензии связаны с &quot;секс-телефонами&quot; и пр., когда звонят дети или<br />&gt; &gt;&gt; люди не понимают или не обращают внимание, что звонок - международный.<br />&gt; &gt;Это и есть порок биллинга, когда в конце достаточно длительного периода<br />&gt; &gt;обнаруживается что-нибудь такое. Обратите внимание, что, звоня с карточки, я<br />&gt; &gt;ограничиваю <em>все</em> свои риски суммой на карточке. Все, от ошибок до враждебных<br />&gt; &gt;атак. Это - правильный протокол (по Андерсону, см. обсуждение с Леонтьевым). <br />&gt; Это не порок, а особенность. Есть кредитные схемы расчетов, а есть с<br />&gt; предоплатой. В кредитных схемах есть взиамные риски кредитора и должника.<br />&gt; Но кредит был и будет в дальнейшем являться одним из средств<br />&gt; экономического регулирования и отказываться от его использования ради<br />&gt; каких-то там правильных протоколов... </p><p>??? По форме (не по содержанию) у Вас получилось что-то типа реплики<br />гэбэшника: &quot;ОРД является и будет являться одним из средств борьбы с<br />преступностью, и отказываться от его использования ради каких-то там<br />конституционных прав...&quot; Технично, просто, и - неизбежно обрушивает на<br />следующем этапе на всех купившихся на такое рассуждение непредсказуемые<br />издержки.</p><p>&gt; Как отказываться от Windows 95 в пользу OS/2. Правильно-то оно может и<br />&gt; правильно, только хлопотно очень.</p><p>От Windows все равно пришлось отказаться во всех реальных ситуациях.</p><p>&gt; Более разумный путь - подстраивать протоколы под реальность. Вовсе не<br />&gt; обязательно втаскивать туда электронную наличность. Достаточно, чтобы<br />&gt; &quot;черные ящики&quot; на обоих концах абонентской линии пересылали друг другу<br />&gt; подписанные &quot;квитанции&quot; с началом и концом разговора. </p><p>Это что, проще или дешевле? Если мы организовали движение инструментов по <br />общим сетям, зачем нам содержать банковскую систему?</p><p>&gt; Но опять же возникает потребность втаскивать &quot;цифру&quot; в современную<br />&gt; аналоговую последнюю милю, а никто до сих пор не обосновал, что это<br />&gt; целесообразно экономически и вообще кому-то надо.</p><p>Я обосновал. Втащил цифру в свою последнюю милю и сэкономил на факсах около <br />$1000 за год. Просто шлю их через Faxaway. Инвестирую в железо и сэкономлю в <br />следующий год $3000 на звонках. Сколько я или Вы экономим, замещая звонки и <br />факсы почтой, затрудняюсь ответить. Почему местные телефонисты не хотят взять <br />часть этих денег, я просто не понимаю. Думаю, что по глупости.</p><p>&gt; &gt;Но я пока не видел калькуляции, показывающей, что простая линия плюс<br />&gt; &gt;стоимость биллинга плюс издержки по претензиям к биллингу дешевле тупого<br />&gt; &gt;карточного телефона.<br />&gt; Стоимость карточного телефона - не менее чем на $15-25 превышает стоимость<br />&gt; обычного. Стоимость карточного телефона с защитой от взлома подручными<br />&gt; средствами - на порядок выше. Вы все время забываете, что телефон находится<br />&gt; <em>в квартире</em>, а не в публичном месте.</p><p>Какая разница, где стоит телефон, если ломать надо карточку? Но дома телефон <br />не нужноо защищать от вандализма, а соответствующие конструктивы и составляют <br />большую часть стоимости общеупотребимых уличных аппаратов.</p><p>&gt; Глупость какая. Сохранность пароля - проблема абонента. Об этом в<br />&gt; абонентском договоре у любого приличного провайдера записано, и правильно<br />&gt; записано, кстати.</p><p>Не связано со сниффингом, но: <strong> сохранность пароля не может обеспечивать одна <br />сторона по определению пароля</strong>. Соответствующая запись означает следующее: <br />&quot;Клиент обязуется бесспорно оплатить любой счет от оператора&quot;.</p><p>Реально, провайдера заставляет воздерживаться от махинаций и халатности <br />только репутация. В штатных ситуациях вопросы решаются самыми разными <br />способами, и средние издержки на их решение могут быть в пределах <br />допустимого.</p><p>Вопросы возникают в кризисных случаях, например, если клиенты опротестуют <br />счета не в 0.5% случаев, а в 20%. В этот конкретный исторический момент <br />проблема возникла из-за сниф-вируса, через год она может возникнуть из-за <br />СОРМ или по какому-либо другому поводу, но рано или поздно от парольной <br />технологии придется отказаться.
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  <tr><td align="center" class="cop">Московский Либертариум, 1994-2020</td></tr>
+  <tr><td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/5183/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:12 GMT -->
+</html>

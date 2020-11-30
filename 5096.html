@@ -1,0 +1,1255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/5096 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 12:18:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Конкуренция в телекоммуникационном секторе
+					- Регулирование и экономика СОРМ
+					- Свободные телекоммуникации
+					- Фонд электронной границы
+					- Дерегулирование
+				- Московский Либертариум
+  </title>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : '5096',
+			template_id : 'skin_simple_material_t',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="5096" class="skin_simple_material_t ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+    <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td align="left" bgcolor="#E0E0E0">
+    <table width="200"  border="0" cellspacing="0" cellpadding="0" height="62" bgcolor="#EEEEEE">
+    <tr>
+      <td height="21" align="center" class="date">27 август 2020</td>
+      <td rowspan=3><img width="4" alt="" src="http://libertarium.ru/pictures/lib_design_lib/back2.gif" class="db" height="65" border="0"/></td>
+    </tr>
+    <tr>
+      <td height="6" bgcolor="#0A537C"><img width="196" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="6" border="0"/></td>
+    </tr>
+    <tr>
+      <td height="35">
+        <form enctype="application/x-www-form-urlencoded" action="http://libertarium.ru/libertarium/lib_search" style="margin:5px;padding:0" method="POST"><input value="free" name="__form_auth" type="hidden"/>
+          <input align="absmiddle" name="SEARCHFOR" style="width:155px" type="text" class="formField" size="10"/>
+          <input type=image src="http://libertarium.ru/pictures/lib_design_lib/search.gif" width=21 height=17 hspace=0 vspace=0 border=0 alt="Поиск" name=FIND align=absmiddle>
+        </form>
+      </td>
+    </tr>
+    </table>
+  </td>
+  <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr bgcolor="#105080">
+    <td width="200" class="menu1" align="center">
+			<span class="userinfo">Пользователь:</span>
+				<span id="authorIdLink">инкогнито</span>
+				<a href="5096/cms_login.html">[login]</a>
+    </td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="21" border="0"/></td>
+    <td width=100% colspan=2 class="menu1" style="padding-right: 30px" align="right">
+      <a href="libertarium/cms_preferences.html">настройки</a> |
+      <a href="libertarium/lib_sitemap.html">карта сайта</a> |
+      <a href="libertarium/lib_statistics.html">статистика</a> |
+      <a target="_blank" href="libertarium/feed_rss2"><img width="36" alt="" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/xml.gif" height="14" border="0"/></a>
+    </td>
+  </tr>
+  <tr bgcolor="#EEEEEE">
+    <td colspan=3><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+  </tr>
+  <tr bgcolor="#7E0001">
+    <td width="200"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td width="100%" colspan=4><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+    <td valign=top width=200>
+      <div class="menuHeader"><a href="libertarium/lib_sitemap.html">Проекты</a></div>
+      <table width="200" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="libtheory.html" title="Ряд исследовательских микропроектов, посвященных стыковке  либертарианского мировоззрения и реалий сегодняшней стремительно &quot;цифризующейся&quot; жизни.">Теория свободы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="eff.html" title="Активизм, аналогичный деятельности американской http://eff.org/ -- привнесение цивилизации в дикую жизнь электроного приграничья. Обеспечение Свободы в Интернете -- свободы слова (нет госцензуре), свободы применению сильного крипто, свободы от государственной прослушки (СОРМ) и т.д.">Фонд электронной границы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="deregul.html" title="Государство должно уйти из экономики. Политики это уже хорошо осознают, и дерегулирование сегодня победно шагает по планете, касаясь даже самых &quot;священных&quot; отраслей -- &quot;естественных монополий&quot;.">Дерегулирование</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="intprop.html" title="Рынок интеллектуальной собственности относится к &quot;изобретенным&quot; (invented) человечеством рынкам. Отнюдь не все либертарианцы считают, что можно владеть и торговать интеллектуальной собственностью. Возникают новые -- криптографические -- формы защиты изобретений, авторских работ, торговых марок. Коренным образом меняется соответствующее законодательство -- по мере того, как все яснее невозможность применения правопринуждения к многочисленным нарушителям сегодняшнего правового режима.">Интеллектуальная собственность в цифровом будущем</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="party.html" title="Проектирование партии нового типа, близкой идеологически к либертарианским партиям Запада, но более приближенной к реалиям цифрового будущего. В данный момент партийное строительство ведется в режиме проектирования самой партии, но  вполне возможен переход от чистого &quot;теоретизирования&quot; к реальным действиям по выдвижению и поддерки кандидатов от Партии свободы на выборы различных уровней.">Партия свободы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="partners.html" title="Рубрики в других сетевых и несетевых изданиях, которые ведет Либертариум.">Либертариум в других изданиях</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="library.html" title="Cамое большое в Сети русскоязычное cобрание книг и статей либертарианской направленности (насколько эта направленность возможна в сегодняшней России). Представлены книги и статьи Мизеса, Хайека, Найшуля, Капелюшникова, Львина, Левенчука, Пескина, Сапова, несколько сборников, а также отдельные статьи разных авторов.">Библиотечка Либертариума</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="frontier.html" title="Цифровое будущее стремительно наступает. Идеи, от которых захватывает дух. Футурология, экстропианство.">ФутуроФронтир</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="boutique.html" title="Обсуждаются современные бизнес-модели, связанные с управлением понимания потребительской &quot;пользы&quot;. Примером являются механизмы моды, ассоциирования некоторых моделей с престижными и т.д.">Управление потребителями: бутикизация экономики</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="intelprop.html" title="">Идеология &quot;интеллектуальной собственности&quot;</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="52136.html" title="">Экономика творчества</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sk_ru.html" title="Материалы Свободного Кабинета (официальный журнал -- http://community.livejournal.com/sk_ru/).">Свободный Кабинет</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="liberalcharter.html" title="Страницы союза &quot;Либеральная Хартия&quot;">Союз &quot;Либеральная Хартия&quot;</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="deregul.html" title="Государство должно уйти из экономики. Политики это уже хорошо осознают, и дерегулирование сегодня победно шагает по планете, касаясь даже самых &quot;священных&quot; отраслей -- &quot;естественных монополий&quot;.">Дерегулирование</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="telecom.html" title="Микропроекты по лоббизму современного нормативного обеспечения свободных телекоммуникаций.">Свободные телекоммуникации</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="energy.html" title="Дерегулирование коснулось сегодня не только транспорта и связи, газа и нефтянки, но и таких традиционных &quot;естественномонопольных&quot; отраслей, как энергетика. И это не только в мире (в мире это началось с чилийского опыта 1982 года), но и в России - преобразованы РАО &quot;ЕЭС России&quot; вместе с его дочерними обществами. Для того чтобы разобраться в нынешнем положении дел и перспективах - читайте опубликованное ниже.">Свободная энергетика</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="regul_st_m.html" title="">Регулирование рынка ценных бумаг</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="lib_energy_fe.html" title="Еженедельные выпуски авторской колонки &laquo;Свободная среда&raquo; будут выходить по средам и содержать комментарии по актуальным экономическим и политическим темам.">Свободная среда</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="6444.html" title="Открытые акционерные общества являются сегодня фундаментом экономики во многих странах. Однако сама модель акционерной корпорации вовсе не проста. Акционеры с контрольными пакетами, акционеры с блокирующими пакетами, миноритарные акционеры, наёмные менеджеры и (разумеется!)государство крепко спутаны сетью противоречий и конфликтов интересов. Какие виды конфликтов определяются вмешательством государства? Какие противоречия вскроются в случае уходя государства из регулирования ОАО? Возможно ли вообще существование публичных компаний в дерегулированной экономике?">Права и свободы акционеров</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="telecom.html" title="Микропроекты по лоббизму современного нормативного обеспечения свободных телекоммуникаций.">Свободные телекоммуникации</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="competition.html" title="Критика различных нормативных актов, ограничивающий конкуренцию в телефонном и интернет-провайдинге. Затрагивается множество как практических (activism), так и теоретических (research) проблем организации добросовестной конкуренции в цифровом будущем.">Конкуренция в телекоммуникационном секторе</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="eff.html" title="Активизм, аналогичный деятельности американской http://eff.org/ -- привнесение цивилизации в дикую жизнь электроного приграничья. Обеспечение Свободы в Интернете -- свободы слова (нет госцензуре), свободы применению сильного крипто, свободы от государственной прослушки (СОРМ) и т.д.">Фонд электронной границы</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="eff_org.html" title="Список угроз, общие вопросы активизма, организация работы по защите сетевых прав и свобод и т.д.">Фонд электронной границы: общие вопросы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="blueribbon.html" title="Фактически, три разных темы: 1. Отсутствие государственной цензуры., 2. Свобода фильтрации контента (как контент-, так и интернет-) провайдерами. 3. Отсутствие лицензирования для сайтов и страничек, аналогичного лицензированию по Закону о СМИ.">Свобода слова в Интернете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm.html" title="Обсуждение проблем предлагаемой ФСБ неконституционной модификации СОРМ (системы оперативно-розыскных мероприятий) в глобальных компьютерных сетях. Основная цель -- не допустить, чтобы &quot;прослушка&quot; велась бесконтрольно, без предъявления провайдерам решений суда.">Регулирование и экономика СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="crypto.html" title="Все правительства мира хотят ограничить свободное использование сильного крипто. Но это у чиновников получается все хуже и хуже...">Свободное использование сильного крипто</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="runames.html" title="Очень много желающих монополизировать выделение доменных имен в Интернете -- и чиновники здесь, как всегда, не последние в очереди.">Выделение доменных имен в Рунете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="runetregul.html" title="Саморегулирование в Рунете уверенно делает первые шаги. Государство не менее уверенно пытается перехватить инициативу. Создаются новые организации, виртуальные клубы, &quot;доски позора&quot;, тусовки, лицензирующие органы и т.д...">Саморегулирование в Рунете</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="putting.html" title="28 декабря 1999г. состоялась встреча так называемой &quot;интернет-общественности&quot; с премьер-министром Путиным, министром связи и информатизации Рейманом и министром печати и информации Лесиным. Обсуждалось возможное регулирование Рунета.">Встреча интернет-общественности с Путиным 28 декабря 1999 года</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="gov_regul.html" title="Проекты Федеральных Законов РФ проходят три чтения в Госдуме, утверждение в Совете Федерации и подписываются Президентом РФ. Уже появились тексты, которые готовятся пройти этот путь...">Законодательные инициативы по регулированию российского сегмента сети Интернет</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="infocustoms.html" title="Если информацию считать товаром, то обязательно найдутся желающие контролировать любую информацию, проходящую через границу &ndash; даже если это и является техническим абсурдом. Цензура более напоминает птичку Феникс, чем можно ожидать.">Информационная таможня</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="competition.html" title="Критика различных нормативных актов, ограничивающий конкуренцию в телефонном и интернет-провайдинге. Затрагивается множество как практических (activism), так и теоретических (research) проблем организации добросовестной конкуренции в цифровом будущем.">Конкуренция в телекоммуникационном секторе</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="competitiondosc.html" title="Нормативные правовые акты, относящиеся к регулированию свободы конкуренции в секторе телекоммуникаций.">Нормативные документы по конкуренции в секторе телекоммуникаций</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="competitionpress.html" title="Пресса о конкуренции в телекоммуникационном секторе">Пресса о конкуренции в телекоммуникациях</a></td>
+  </tr>
+  </table>
+ <div class="menuHeader">
+    <a href="sorm.html" title="Обсуждение проблем предлагаемой ФСБ неконституционной модификации СОРМ (системы оперативно-розыскных мероприятий) в глобальных компьютерных сетях. Основная цель -- не допустить, чтобы &quot;прослушка&quot; велась бесконтрольно, без предъявления провайдерам решений суда.">Регулирование и экономика СОРМ</a>
+  </div>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_bsc.html" title="ФСБ требует уcтановки СОРМ-2 у интернет-провайдера в г.Волгоград. Интернет провайдер оказывает сопротивление незаконным требованиям и испытывает все прелести силового давления.">Случай с &quot;Баярд-Славия Коммуникейшнс&quot; (г. Волгоград)</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sormlawdocs.html" title="Нормативные правовые акты по СОРМ">Нормативные документы по СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_develop.html" title="Технические требования по СОРМ-2 и документы, относящиеся к их разработке">Технические требования по СОРМ-2 и ход их разработки</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_control.html" title="В силовых органах работают отнюдь не ангелы. Случаи злоупотреблений со стороны работников силовиков не так уж редки.">Почему за силовыми органами нужен контроль?</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_law.html" title="СОРМ-2 порожден в том числе из-за несовершенства российского законодательства. Но существующих законов, похоже, хватает для предотвращения негативных последствий от внедрения СОРМ для общества.">О конституционности СОРМ и проблемы законодательства</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_audit.html" title="Предлагаемые изменения к техническим требованиям СОРМ-2, обеспечивающим контроль за деятельностью силовиков. Подход связан с применением криптотехнологий.">Криптоаудит СОРМ-2</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_crypto_esc.html" title="От СОРМ очень легко защититься применением криптотехнологий.">Криптоуход от СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sorm_spy.html" title="Как я понимаю, эти материалы констатируют, что спецслужбы всех стран имеют одинаковые повадки. Россия, конечно, не будет исключением. Интересно, как &quot;шалости&quot; спецслужб влияют на экспортный потенциал своих стран? Или для российских спецслужб &quot;шалить&quot; становится возможным из-за практического отсутствия экспорта?">Электронный бизнес-шпионаж спецслужб</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="l_sorm_95.html" title="Свидетельства провайдеров о том, как к ним приходили из силовых органов и пытались нарушить законодательство.">СОРМ как он есть: глазами очевидца</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sormactivism.html" title="Активизм (митинги, конференции, петиции и т.д.) по поводу СОРМ">Активизм по проблеме СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sormpress.html" title="">Пресса о СОРМ</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem0">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="sormbanners.html" title="Фольклор о СОРМ">Баннеры, карикатуры, слоганы</a></td>
+  </tr>
+  </table>
+  <table width=200 border=0 cellspacing=0 cellpadding=0 class="menuItem1">
+  <tr>
+    <td class="menuItemIcon"><img width="19" alt="рубрика" src="http://libertarium.ru/pictures/lib_design_lib/topic.gif" height="15" border="0"/>
+</td>
+    <td class="menuItemTitle"><a href="privacy.html" title="Защита персональных данных. Приватность в компьютерных сетях. Приватность и СОРМ.">Прайвеси</a></td>
+  </tr>
+  </table>
+          <div class="pageDelimiter"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></div>
+          <img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="15" border="0"/><br>
+          <table border="0" cellspacing="0" cellpadding="5" align="center">
+          <tr><td><img vspace="3" width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner1.gif" height="31" border="1>"" hspace="0" class="db"/></td></tr>
+          <tr><td><a href="http://www.adt.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner2.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://www.eurasia.msk.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner3.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://www.communiware.ru/"><img width="88" alt="" src="http://libertarium.ru/pictures/lib_design_lib/banner4.gif" class="db" height="31" border="0"/></a></td></tr>
+          <tr><td><a href="http://counter.rambler.ru/top100/"><img src="../kraken.rambler.ru/top100/banner-88x31-rambler-gray2.gif" width="88" height="31" border="0"></a><img width="1" src="../counter.rambler.ru/index.html" height="1" alt=""></td>
+          <tr><td>
+            <!-- SpyLOG v2 f:0211 -->
+            <script language="javascript"> 
+            u="u916.87.spylog.com";d=document;nv=navigator;na=nv.appName;p=0;j="N"; 
+            d.cookie="b=b";c=0;bv=Math.round(parseFloat(nv.appVersion)*100); 
+            if (d.cookie) c=1;n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random(); 
+            z="p="+p+"&rn="+rn+"&c="+c;if (self!=top) {fr=1;} else {fr=0;} 
+            sl="1.0";</script><script language="javascript1.1"> 
+            pl="";sl="1.1";j = (navigator.javaEnabled()?"Y":"N");</script>
+            <script language=javascript1.2> 
+            sl="1.2";s=screen;px=(n==0)?s.colorDepth:s.pixelDepth; 
+            z+="&wh="+s.width+'x'+s.height+"&px="+px; 
+            </script><script language=javascript1.3> 
+            sl="1.3"</script><script language="javascript"> 
+            y="";y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+            y+="<img src='http://"+u+"/cnt?"+z+"&j="+j+"&sl="+sl+ 
+            "&r="+escape(d.referrer)+"&fr="+fr+"&pg="+escape(window.location.href); 
+            y+="' border=1 width=88 height=31 alt='SpyLOG'>"; 
+            y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript>
+            <a href="http://u916.87.spylog.com/cnt?f=3&amp;p=0" target=_blank>
+            <img src="https://openstat.net/digits?p=0" alt='SpyLOG' border='0' width=88 height=31 >
+            </a></noscript><script language="javascript1.2"><!-- 
+            if(!n) { d.write("--"+">"); }//--></script>
+            <!-- SpyLOG -->
+          </td></tr>
+          </table>
+          <img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/>
+        </td>
+      </tr>
+      </table>
+    </td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+</h1>
+		<div class="icons">
+	<a href="5096/lib_allmaterials.html">
+		<img width="21" alt="материалы" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/materials.gif" title="материалы" height="17" border="0"/>
+	</a>
+	<a href="5096/lib_allcomments.html">
+		<img width="21" alt="комментарии" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/replics.gif" title="комментарии" height="17" border="0"/>
+	</a>
+				<a href="5096/cms_subscribe.html">
+					<img width="21" alt="подписка" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/subscribe.gif" title="подписка" height="17" border="0"/>
+				</a>
+	<a target="_blank" href="509697a7.html?PRINT_VIEW=YES">
+		<img width="21" alt="вид для печати" align="absmiddle" src="http://libertarium.ru/pictures/lib_design_lib/print.gif" title="вид для печати" height="17" border="0"/>
+	</a>
+		</div>
+</div>
+				<div class="pageText"><p>Насчет ОПУС и возможности извлечения
+информации из баз данных. Уважаемый автор здесь
+практически обвинил МГТС в использовании своих
+возможностей для сбора информации о абонентах в
+интересах третьих лиц и полном отсутствии
+какой-либо нормативной (законодательной) базы,
+регулирующей этот вопрос. Я бы хотел отметить,
+что это далеко не так.
+</p><p>Во-первых, существует закон &quot;О информации,
+информатизации и защите информации&quot;, в котором
+оговорена необходимость защиты персональной
+информации. Во-вторых, телефонные сети - или
+региональные АО &quot;Электросязь - Н-ск&quot; - сейчас
+озабочены защитой информации, к-рая находится в
+АРС (автоматизированные системы расчетов -
+биллинг), а также защитой каналов управления АТС
+и другого коммутационного оборудования (не
+секрет, что во всех _импортных_ АТС есть
+_встроенная изготовителем_ собственная функция
+съема информации, которую, очевидно, нашим
+специалистам не объясняют и не документируют.
+Наш, отечественный :) СОРМ базируется на
+отдельных дополнительных модулях, без которых не
+дадут сертификат Госкомсвязи (ГКС). Так вот, эти
+побочные каналы дают возможность в принципе
+перехватывать всю информацию из АТС (а она
+обязательно передается в процессе
+установления/разрыва соединеия). В начале июля в
+Спб. проходила конференция под эгидой ГКС, на
+которой вопросу защиты <br />
+1) каналов передачи служебной информации, т.н.
+ОКС-7, и <br />
+2) собственно АРС, которые представляют собой
+компьютер с базой данных и программой(амми) их
+обработки <br />
+уделялось большое внимание. Подчеркивалось,
+кстати, что на эти части (функции?, системы?)
+требования СОРМ не распространяются - СОРМ
+должен быть на центре управления (ЦУС).
+</p><p>Подход, который предлагает автор комментария -
+децентрализация - нереален, т.к. 1) это неудобно в
+эксплуатации и не решает собственных задач
+самого оператора, 2) нет защиты от
+недобросовестных абонентов и 3) централизованные
+функции уже есть и применяются для управления
+сетью, поэтому отменить их и перейти на
+децентрализованный подход - нереально и
+нецелесообразно (вперед к сигнальным кострам на
+холмах?:).
+</p><p>Выход в другом - оснащать и канал ОКС-7, и АРС
+нормальными комплексными системами защиты, что
+мы и предложили на конференции. Если интересно
+или целесообразно, то требования к защите можно
+опубликовать для обсуждения, <A href="ott.html" >соответственные
+тексты я прилагаю</a>.
+</p><p>Всего доброго <br />
+Дмитрий Старовойтов <br />
+ООО &quot;ТехИнформКонсалтинг&quot; <br />
+тел. (095)-290-25-39, (095) -290-23-07<br />
+факс (095)-290-04-65 <br />
+</p></div>
+	<div class="pageAnnotation" id="pageAnnotationBottom">
+		<div class="itemAuthor">Автор: <a href="dstar.html">Дмитрий Старовойтов</a></div>
+	<div class="itemDate">27.07.1998</div>
+	</div>
+	<div class="pageBlock">
+		<h2>Комментарии (7)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> | <a href="5177/lib_thread.html">трейдинг VS биллинг</a> | <a href="5176/lib_thread.html">Угрозы со стороны производителей</a> |
+				<b><a href="5096/lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    29.07.1998<br/>в ответ на:
+        <a href="5096.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 27.07.1998)
+	</div>
+	<div class="text">
+		<br />Дмитрий Старовойтов 27 июля 1998г. комментирует:<br />
+<br />
+&gt; Уважаемый автор здесь практически обвинил
+МГТС в использовании своих<br />
+&gt; возможностей для сбора информации о абонентах
+в интересах третьих лиц ...<br />
+<br />
+По тексту &quot;обвинения&quot; не было, было
+акцентирование технической возможности.<br />
+<br />
+&gt; ... и полном отсутствии какой-либо нормативной
+(законодательной) базы,<br />
+&gt; регулирующей этот вопрос. <br />
+<br />
+Дело не в нормативной базе, дело в технической
+инфраструктуре. То же самое, <br />
+что показывает обсуждение СОРМ - есть
+нормативная база (Конституция, Закон о <br />
+связи), которая искажается и делается
+неконсистентной.<br />
+<br />
+Закон можно поменять за месяц, сложные
+технические инфраструктуры создаются <br />
+годами и служат десятилетиями.<br />
+<br />
+Я почти никого не знаю в МГТС, и готов априорно
+допустить, что там работают <br />
+честные и порядочные люди. Однако ставить
+надежность системы в целом в <br />
+зависимость от законопослушности и порядочности
+человека, работающего на том <br />
+или ином функциональном месте - по меньшей мере
+странно.<br />
+<br />
+&gt; Я бы хотел отметить, что это далеко не так.
+Во-первых, существует закон &quot;О<br />
+&gt; информации, информатизации и защите
+информации&quot;, в котором оговорена<br />
+&gt; необходимость защиты персональной
+информации. <br />
+<br />
+Если Вы сами в это верите, в следующий раз не
+заставляйте меня гонять по <br />
+Москве и Подмосковью высокооплачиваемых
+сотрудников в качестве курьеров ... <br />
+:)<br />
+<br />
+&gt; Во-вторых, телефонные сети - или региональные
+АО &quot;Электросязь - Н-ск&quot; -<br />
+&gt; сейчас озабочены защитой информации, к-рая
+находится в АРС<br />
+&gt; (автоматизированные системы расчетов -
+биллинг), а также защитой каналов<br />
+&gt; управления АТС и другого коммутационного
+оборудования (не секрет, что во<br />
+&gt; всех _импортных_ АТС есть _встроенная
+изготовителем_ собственная функция<br />
+&gt; съема информации, которую, очевидно, нашим
+специалистам не объясняют и не<br />
+&gt; документируют. <br />
+<br />
+Вот это - действительно отдельный важный
+содержательный вопрос. Его можно <br />
+конструктивно обсуждать.<br />
+<br />
+(Не сочтите за персональный наезд, но если бы
+известное нам ведомство не <br />
+закупало в таких страшных количествах технику
+для ответственной связи у <br />
+Siemens, жить было бы много легче...)<br />
+<br />
+&gt; Наш, отечественный :) СОРМ базируется на
+отдельных дополнительных модулях,<br />
+&gt; без которых не дадут сертификат Госкомсвязи
+(ГКС). Так вот, эти побочные<br />
+&gt; каналы дают возможность в принципе
+перехватывать всю информацию из АТС (а<br />
+&gt; она обязательно передается в процессе
+установления/разрыва соединеия). <br />
+<br />
+Дадут возможность - кому?<br />
+<br />
+&gt; В начале июля в Спб. проходила конференция под
+эгидой ГКС, на которой<br />
+&gt; вопросу защиты<br />
+&gt; 1) каналов передачи служебной информации, т.н.
+ОКС-7, и<br />
+&gt; 2) собственно АРС, которые представляют собой
+компьютер с базой данных и<br />
+&gt; программой(амми) их обработки <br />
+&gt; уделялось большое внимание. Подчеркивалось,
+кстати, что на эти части<br />
+&gt; (функции?, системы?) требования СОРМ не
+распространяются - СОРМ должен быть<br />
+&gt; на центре управления (ЦУС).<br />
+<br />
+Действительно, отдельный вопрос: как построить
+надежную сеть с использованием <br />
+оборудования, которому не доверяешь? Но, вроде бы,
+не в июле, не ГКС и не <br />
+в СПб это начали обсуждать впервые. Вся
+криптография - именно про это. Будет <br />
+открытый рынок решений - будут и решения, в
+частности, и этой задачи.<br />
+<br />
+&gt; Подход, который предлагает автор комментария -
+децентрализация - нереален,<br />
+&gt; т.к. 1) это неудобно в эксплуатации и не решает
+собственных задач самого<br />
+&gt; оператора, <br />
+<br />
+Вот операторы автоматных сетей-то дураки, не
+понимают, что своих задач не <br />
+решают. Надо бы им сказать, а то развернули
+многомилионный нереальный <br />
+бизнес...<br />
+<br />
+&gt; 2) нет защиты от недобросовестных абонентов,<br />
+<br />
+Отдельная задача, но решается она за счет
+архитектуры с <br />
+предполагаемым взаимным недоверием. Иначе будет
+&quot;защита сети от абонента&quot; со <br />
+всеми теми последствиями, которые мы уже месяц
+обсуждаем. (И с которыми <br />
+столкнулись в других классах сетей, например
+банкоматных).<br />
+<br />
+&gt; и 3) централизованные функции уже есть и
+применяются для управления сетью,<br />
+&gt; поэтому отменить их и перейти на
+децентрализованный подход - нереально и<br />
+&gt; нецелесообразно (вперед к сигнальным кострам
+на холмах?:).<br />
+<br />
+Это - самый серьезный вопрос. Мне кажется,
+Дмитрий, что Вы слишком <br />
+прямолинейно видите пути развития телекома.
+Наряду с долгим и устойчивым <br />
+трендом к централизации, существует и тренд к
+децентрализации. В США он стал <br />
+видимым невооруженным глазом к середине
+семидесятых и привел в конце-концов к <br />
+разукрупнению Мамы Белл (AT&amp;T). В Европе - чуть
+позже. И у меня есть все <br />
+основания полагать, что он сдерживался в течение
+долгого времени чисто <br />
+политически. Одна половинка аргументации - в
+известной книге Хьюбера &quot;Law And <br />
+Disorder in Cyberspace&quot;. Вторая половинка - это Echelon и все,
+что с ним <br />
+связано - еще не нашла своего летописца.<br />
+<br />
+Я понимаю, что экономика отрасли - тема для
+отдельного внимательного <br />
+обсуждения (и заинтересован в таком обсуждении).
+Однако, вот две эмпирических <br />
+зарисовки, указывающие на ход моих размышлений.<br />
+<br />
+1. Сравним архитектуру Internet и существующих
+телефонных сетей на предмет <br />
+централизации/децентрализации. Глядя на
+реализацию Internet, можно <br />
+невооруженным глазом заметить:<br />
+<br />
+(а) централизованно выполняются только функции
+самого нижнего уровня <br />
+(фактически, только маршрутизация IP), все
+вышестоящие протоколы <br />
+отрабатываются децентрализованно;<br />
+<br />
+(б)расчеты за большинство типов услуг
+выполняются по тем же каналам, что и <br />
+оказание услуг. Примечательное исключение -
+провайдинг собственно коммутации <br />
+IP-пакетов - оплачиваемый посредством биллинга -
+скорее тот поручик, который <br />
+идет сильно не в ногу. Плюс - провайдинг
+коммутации (провайдинг доступа), <br />
+который пять лет назад практически занимал весь
+рынок Internet, постепенно <br />
+относительно &quot;съеживается&quot;.<br />
+<br />
+Чисто экономически, безбиллинговые системы
+оплаты должны выдавить <br />
+биллинговые; препятствовать этому могут лишь
+инерция уже созданных систем (на <br />
+которую Вы совершенно правильно указываете) и
+политические факторы.<br />
+<br />
+Помимо всего прочего, централизация несет в себе
+концентрацию и снижение <br />
+управляемости не только социальных рисков,
+которые начал обсуждать Александр, <br />
+но и многих технофинансовых рисков отрасли.
+Громоздить иерархию можно только <br />
+до какого-то предела, потом она падает под
+собственной тяжестью. То, что Мама <br />
+Белл не слишком активно сопротивлялась
+разукрупнению, частично imho было <br />
+связано с тем, что издержки биллинга выросли с 10%
+операционных расходов в <br />
+начале века до 30%+ в семидесятые (а в Европе
+кое-где - до 50%!).<br />
+<br />
+2. Уместно сравнить специфически телефонные
+протоколы (например, ОКС-7 suite <br />
+- кстати, реализовал ли кто-нибудь когда-нибудь ее
+полностью???) с базовым <br />
+набором протоколов Internet на предмет толщины пачки
+бумаги и стоимости <br />
+реализации....<br />
+<br />
+&gt; Выход в другом - оснащать и канал ОКС-7, и АРС
+нормальными комплексными<br />
+&gt; системами защиты, что мы и предложили на
+конференции. <br />
+<br />
+Не понимаю, почему &quot;другое&quot;? Ну, инкапсулирую
+я протоколы Internet или <br />
+инкапсулирую ОКС-7, какая разница? Только что
+второе сложнее...<br />
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="dstar.html">Дмитрий Старовойтов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5117.html">комментарий</a>
+        (<a href="maksim.html">Максим Отставнов</a>, 29.07.1998)
+	</div>
+	<div class="text">
+		<br />
+&gt; Дмитрий Старовойтов 27 июля 1998г. комментирует:<br />
+<br />
+&gt;&gt; Уважаемый автор здесь практически обвинил
+МГТС в использовании своих<br />
+&gt;&gt; возможностей для сбора информации о абонентах
+в интересах третьих лиц ...<br />
+<br />
+&gt; По тексту &quot;обвинения&quot; не было, было
+акцентирование технической возможности.<br />
+<br />
+согласен. из контекста следовало, но прямого
+обвинения не было<br />
+&gt;&gt; ... и полном отсутствии какой-либо нормативной
+(законодательной) базы,<br />
+&gt;&gt; регулирующей этот вопрос.<br />
+<br />
+<br />
+я как раз писал, что есть закон, правда очень
+несовершенный<br />
+<br />
+<br />
+&gt; Дело не в нормативной базе, дело в технической
+инфраструктуре. То же самое,<br />
+&gt; что показывает обсуждение СОРМ - есть
+нормативная база (Конституция, Закон о<br />
+&gt; связи), которая искажается и делается
+неконсистентной.<br />
+<br />
+<br />
+&gt; Закон можно поменять за месяц, сложные
+технические инфраструктуры создаются<br />
+&gt; годами и служат десятилетиями.<br />
+<br />
+<br />
+о чем и я. Инфраструктура уже сложилась, и
+карточки, к сожалению, опоздали к<br />
+моменту появления цифровых АТС. Кроме того,
+подавляющее большинство<br />
+претензий к расчетам не имеет, в основном
+претензии связаны с<br />
+&quot;секс-телефонами&quot; и пр., когда звонят дети
+или люди не понимают или не<br />
+обращают внимание, что звонок - международный.<br />
+<br />
+&gt; Я почти никого не знаю в МГТС, и готов априорно
+допустить, что там работают<br />
+&gt; честные и порядочные люди. Однако ставить
+надежность системы в целом в<br />
+&gt; зависимость от законопослушности и порядочности
+человека, работающего на том<br />
+&gt; или ином функциональном месте - по меньшей мере
+странно.<br />
+<br />
+<br />
+я и не ставлю, у меня профессия как раз по этой
+части (информационная<br />
+безопасность).<br />
+<br />
+&gt;&gt; Я бы хотел отметить, что это далеко не так.
+Во-первых, существует закон &quot;О<br />
+&gt;&gt; информации, информатизации и защите
+информации&quot;, в котором оговорена<br />
+&gt;&gt; необходимость защиты персональной
+информации.<br />
+<br />
+&gt; Если Вы сами в это верите, в следующий раз не
+заставляйте меня гонять по<br />
+&gt; Москве и Подмосковью высокооплачиваемых
+сотрудников в качестве курьеров ...<br />
+&gt; :)<br />
+Не понял ? :)<br />
+<br />
+&gt;&gt; Во-вторых, телефонные сети - или региональные
+АО &quot;Электросязь - Н-ск&quot; -<br />
+&gt;&gt; сейчас озабочены защитой информации, к-рая
+находится в АРС<br />
+&gt;&gt; (автоматизированные системы расчетов -
+биллинг), а также защитой каналов<br />
+&gt;&gt; управления АТС и другого коммутационного
+оборудования (не секрет, что во<br />
+&gt;&gt; всех _импортных_ АТС есть _встроенная
+изготовителем_ собственная функция<br />
+&gt;&gt; съема информации, которую, очевидно, нашим
+специалистам не объясняют и не<br />
+&gt;&gt; документируют.<br />
+<br />
+&gt; Вот это - действительно отдельный важный
+содержательный вопрос. Его можно<br />
+&gt; конструктивно обсуждать.<br />
+<br />
+&gt; (Не сочтите за персональный наезд, но если бы
+известное нам ведомство не<br />
+&gt; закупало в таких страшных количествах технику
+для ответственной связи у<br />
+&gt; Siemens, жить было бы много легче...)<br />
+<br />
+Сименс это как раз отдал, и этот блок выкинули, но
+от этого не легче с<br />
+остальными производителями. Более того, средства
+доверенной загрузки<br />
+программ (а они все на спецязыке с странным
+именем (забыл:) на Унихе:)<br />
+позволяют запретить загрузку этого софта
+принудительно.<br />
+Речь идет о Хайкомах.<br />
+С EWSD, которые идут на обычную связь, как дела
+обстоят, не знаю, но думаю,<br />
+что он там, родимый.<br />
+<br />
+&gt;&gt; Наш, отечественный :) СОРМ базируется на
+отдельных дополнительных модулях,<br />
+&gt;&gt; без которых не дадут сертификат Госкомсвязи
+(ГКС). Так вот, эти побочные<br />
+&gt;&gt; каналы дают возможность в принципе
+перехватывать всю информацию из АТС (а<br />
+&gt;&gt; она обязательно передается в процессе
+установления/разрыва соединеия).<br />
+<br />
+&gt; Дадут возможность - кому?<br />
+Во-первых, производителю - это просто (с помощью
+их сорм).<br />
+Во-вторых, просто хакеру, т.к. &quot;слом&quot; АТС как
+максимум эквивалентен слому<br />
+соответствующей версии Unix (или подбору пароля).<br />
+Кроме того, возможен несанкционированый бизнес
+обслуживающего персонала,<br />
+когда, например, междугородку пускают &quot;за
+счет&quot; какого-нибудь клиента с<br />
+большим объемом трафика - это обычное
+переназначение вызова. Говорят даже,<br />
+что тот инженер, который звонит по межгороду за
+свой счет (из дома) - плохо<br />
+учил матчасть :)<br />
+<br />
+&gt;&gt; В начале июля в Спб. проходила конференция под
+эгидой ГКС, на которой<br />
+&gt;&gt; вопросу защиты<br />
+&gt;&gt; 1) каналов передачи служебной информации, т.н.
+ОКС-7, и<br />
+&gt;&gt; 2) собственно АРС, которые представляют собой
+компьютер с базой данных и<br />
+&gt;&gt; программой(амми) их обработки<br />
+&gt;&gt; уделялось большое внимание. Подчеркивалось,
+кстати, что на эти части<br />
+&gt;&gt; (функции?, системы?) требования СОРМ не
+распространяются - СОРМ должен<br />
+быть<br />
+&gt;&gt; на центре управления (ЦУС).<br />
+<br />
+&gt; Действительно, отдельный вопрос: как построить
+надежную сеть с<br />
+использованием<br />
+&gt; оборудования, которому не доверяешь?<br />
+<br />
+Реализуемо с помощью средств защиты, которым
+доверяешь. (по отношению  к<br />
+атакам извне, по крайней мере). А так, для винтеля,
+например - Аккорд или<br />
+Сикрет Нет.<br />
+<br />
+&gt; Но, вроде бы, не в июле, не ГКС и не<br />
+в СПб это начали обсуждать впервые.<br />
+<br />
+Елы-палы. Я говорю _про ГКС и проблемы защиты в
+АРС_ (к тому же у нас в<br />
+стране).<br />
+<br />
+<br />
+&gt;&gt; Подход, который предлагает автор комментария -
+децентрализация - нереален,<br />
+&gt;&gt; т.к. 1) это неудобно в эксплуатации и не решает
+собственных задач самого<br />
+&gt;&gt; оператора,<br />
+<br />
+&gt; Вот операторы автоматных сетей-то дураки, не
+понимают, что своих задач не<br />
+&gt; решают. Надо бы им сказать, а то развернули
+многомилионный нереальный<br />
+&gt; бизнес...<br />
+<br />
+Ирония неуместна, т.к. в контексте речь шла о
+квартирных телефонах.<br />
+<br />
+<br />
+&gt;&gt; 2) нет защиты от недобросовестных абонентов,<br />
+<br />
+&gt; Отдельная задача, но решается она за счет
+архитектуры с<br />
+&gt; предполагаемым взаимным недоверием. Иначе будет
+&quot;защита сети от абонента&quot; со<br />
+&gt; всеми теми последствиями, которые мы уже месяц
+обсуждаем. (И с которыми<br />
+&gt; столкнулись в других классах сетей, например
+банкоматных).<br />
+<br />
+Нереально по экономическим причинам -
+повременку-то осилить не можем.<br />
+<br />
+<br />
+&gt;&gt; и 3) централизованные функции уже есть и
+применяются для управления сетью,<br />
+&gt;&gt; поэтому отменить их и перейти на
+децентрализованный подход - нереально и<br />
+&gt;&gt; нецелесообразно (вперед к сигнальным кострам
+на холмах?:).<br />
+<br />
+&gt; Это - самый серьезный вопрос. Мне кажется,
+Дмитрий, что Вы слишком<br />
+&gt; прямолинейно видите пути развития телекома.
+Наряду с долгим и устойчивым<br />
+&gt; трендом к централизации, существует и тренд к
+децентрализации. В США он стал<br />
+&gt; видимым невооруженным глазом к середине
+семидесятых и привел в конце-концов<br />
+к<br />
+&gt; разукрупнению Мамы Белл (AT&amp;T). В Европе - чуть
+позже. И у меня есть все<br />
+&gt; основания полагать, что он сдерживался в течение
+долгого времени чисто<br />
+&gt; политически. Одна половинка аргументации - в
+известной книге Хьюбера &quot;Law<br />
+And<br />
+&gt; Disorder in Cyberspace&quot;. Вторая половинка - это Echelon и все,
+что с ним<br />
+&gt; связано - еще не нашла своего летописца.<br />
+<br />
+&gt; Я понимаю, что экономика отрасли - тема для
+отдельного внимательного<br />
+&gt; обсуждения (и заинтересован в таком обсуждении).
+Однако, вот две<br />
+эмпирических<br />
+&gt; зарисовки, указывающие на ход моих размышлений.<br />
+<br />
+&gt; 1. Сравним архитектуру Internet и существующих
+телефонных сетей на предмет<br />
+&gt; централизации/децентрализации.<br />
+<br />
+Дальше я все поскипал ввиду того, что
+рассмотрение нчато не с того конца.<br />
+Причина оплаты традиционной телефонии по
+времени и по расстоянию (по зонам)-<br />
+в том, что там коммутация каналов. Для
+осуществления разговора<br />
+соответствующие каналы занимаются монопольно.
+Платит (по традиции) -<br />
+инициатор разговора (хотя для радио систем
+платят оба). Технология ISDN<br />
+принципиально такая же, весь тракт BRI (точнее один
+В канал) монопольно<br />
+занимается под разговор. Взамен этого
+достигается гарантированное качество<br />
+обслуживания, фактически гарантированная полоса
+пропускания (CIR в FR,<br />
+который служит транспортом для ISDN по классике)
+плюс гарантированное<br />
+качество канала (вероятность ошибки на
+бит).Наличие гарантированной &quot;ширины&quot;<br />
+канала фактически означает, что происходит
+монопольное занятие канала/его<br />
+части. То же самое, кстати, и в АТМ. (Тут я
+несколько огрубил картину, там<br />
+есть понятие BIR - birst interchange rate, и разные
+вероятностные<br />
+характеристики, и приоритеты, но в целом все так).<br />
+При появлении IP (вообще пакетной коммутации, там
+же и Х25, TDMA и еще много<br />
+другой экзотики) ситуация кардинально меняется.
+Нет речи о гарантированной<br />
+пропускной способности, в один канал я могу
+&quot;мультиплексировать&quot;  много<br />
+соединений, например в Х25 до 4096 (это на 64К по
+стандарту). Поэтому<br />
+1) нет тарификации в зависимости от зоны (как
+правило, на этом все СПД и<br />
+живут, собственно)<br />
+2) отсюда и попытки считать трафик, как мерило
+загрузки сети.<br />
+<br />
+Вся интернет-телефония сейчас &quot;заткнулась&quot;
+именно на том, что в IP нельзя<br />
+гарантировать полосу и, как следствие,
+ограничить задержки пакетов<br />
+(допустимо 200мс). препятствие обходится путем
+создания &quot;толстого&quot; канала и<br />
+сжатия голоса. Похоже, что теоретический предел
+(при слоговой разборчивости<br />
+около 95% для английского языка) около  6Кбит/с.
+Еще некоторая полоса<br />
+требуется для передачи сигнальной информации
+(около 1-2К).<br />
+<br />
+В итоге я  наблюдаю картину, обратную Вашей -
+что принципы тарификации в<br />
+Инете будут приближаться к обычным, т.к. все
+упрется в аренду наземных<br />
+каналов (спутники и связь на ДВ/СВ/КВ я не
+рассматриваю ввиду малой<br />
+пропускной способности), а там принцип оплаты
+расстояния/времени будет еще<br />
+долго.<br />
+<br />
+Пардон за уход в сторону, но оптимизм по поводу
+интернета я считаю слегка<br />
+преувеличинным и аналогии с Инетом несколько
+некорректными.<br />
+<br />
+<br />
+А ОКС-7 в полном объеме (строго говоря, Q-931 или
+что-то в этом роде),<br />
+по-моему, действительно нигде не реализован, хотя
+есть промышленное<br />
+подмножество, оно и зовется ОКС-7 (SS-7).<br />
+<br />
+&gt;&gt; Выход в другом - оснащать и канал ОКС-7, и АРС
+нормальными комплексными<br />
+&gt;&gt; системами защиты, что мы и предложили на
+конференции.<br />
+<br />
+&gt; Не понимаю, почему &quot;другое&quot;? Ну, инкапсулирую
+я протоколы Internet или<br />
+&gt; инкапсулирую ОКС-7, какая разница? Только что
+второе сложнее...<br />
+<br />
+Речь шла о том, что защита от атак на АРС _извне_
+может быть либо с помощью<br />
+доверенных клиентских устройств, либо с помощью
+защиты самой АРС и системы<br />
+управления. А она здесь выполняет именно
+рольмаршрутизации и пр., поэтому<br />
+децентрализованная телефонная сеть быть не
+может. Именно это я имел в виду,<br />
+когда писал о кострах и пр.<br />
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5119.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt; Дело не в нормативной базе, дело в технической инфраструктуре. То же<br />&gt; &gt; самое, что показывает обсуждение СОРМ - есть нормативная база (Конституция,<br />&gt; &gt; Закон о связи), которая искажается и делается неконсистентной.<br />&gt; &gt; Закон можно поменять за месяц, сложные технические инфраструктуры<br />&gt; &gt; создаются годами и служат десятилетиями.<br />&gt; <br />&gt; о чем и я. Инфраструктура уже сложилась, и карточки, к сожалению, опоздали к<br />&gt; моменту появления цифровых АТС. <p>Ну тогда все, конец света :) Раз инфраструктура уже сложилась...</p><p>Если серьезно, с какой скоростью может расти отрасль телекома, оставаясь <br />рентабельной? Я думаю, для России сейчас и в ближайшем будущем - в 1.2 <br />- полтора раза в год по номерному пространству. И сколько через пять лет <br />останется &quot;существующей инфраструктуры&quot;?</p><p>&gt; Кроме того, подавляющее большинство претензий к расчетам не имеет, в<br />&gt; основном претензии связаны с &quot;секс-телефонами&quot; и пр., когда звонят дети или<br />&gt; люди не понимают или не обращают внимание, что звонок - международный.</p><p>Это и есть порок биллинга, когда в конце достаточно длительного периода <br />обнаруживается что-нибудь такое. Обратите внимание, что, звоня с карточки, я <br />ограничиваю <em>все</em> свои риски суммой на карточке. Все, от ошибок до враждебных <br />атак. Это - правильный протокол (по Андерсону, см. обсуждение с Леонтьевым).</p><p>&gt; &gt; Я почти никого не знаю в МГТС, и готов априорно допустить, что там<br />&gt; &gt; работают честные и порядочные люди. Однако ставить надежность системы в<br />&gt; &gt; целом в зависимость от законопослушности и порядочности человека,<br />&gt; &gt; работающего на том или ином функциональном месте - по меньшей мере странно.<br />&gt; <br />&gt; я и не ставлю, у меня профессия как раз по этой части (информационная<br />&gt; безопасность).</p><p>Спасибо за солидаризацию ! :)
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="5176/lib_thread.html">Угрозы со стороны производителей</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5119.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt; Вот это - действительно отдельный важный содержательный вопрос. Его можно<br />&gt; &gt; конструктивно обсуждать.<br />&gt; <br />&gt; &gt; (Не сочтите за персональный наезд, но если бы известное нам ведомство не<br />&gt; &gt; закупало в таких страшных количествах технику для ответственной связи у<br />&gt; &gt; Siemens, жить было бы много легче...)<br />&gt; <br />&gt; Сименс это как раз отдал, и этот блок выкинули, <p>&quot;Семен Михалыч два пулемета отдал, подумал, и третий на всякий случай<br />оставил&quot;. Это байка такая была, как Буденный от чекистов отстреливался :)<br />Сименс хитрый... :)
+</p>
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="5177/lib_thread.html">трейдинг VS биллинг</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5119.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt;&gt; Выход в другом - оснащать и канал ОКС-7, и АРС нормальными комплексными<br />&gt; &gt;&gt; системами защиты, что мы и предложили на конференции.<br />&gt; <br />&gt; &gt; Не понимаю, почему &quot;другое&quot;? Ну, инкапсулирую я протоколы Internet или<br />&gt; &gt; инкапсулирую ОКС-7, какая разница? Только что второе сложнее...<br />&gt; <br />&gt; Речь шла о том, что защита от атак на АРС <em>извне</em> может быть либо с<br />&gt; помощью доверенных клиентских устройств, либо с помощью защиты самой АРС и<br />&gt; системы управления. А она здесь выполняет именно рольмаршрутизации и пр.,<br />&gt; поэтому децентрализованная телефонная сеть быть не может. Именно это я имел<br />&gt; в виду, когда писал о кострах и пр.<p>Не может-то не может, да вот только недавно было презентировано такое <br />нехитрое устройство: сотовый телефон, который может коннектиться с другим <br />сотовым телефоном, если рядом (а если не рядом, выходит на соту; в <br />принципе, если совсем не рядом, должен выходить на спутник).</p><p>При увеличении производительности embedded-процессоров еще на порядок (это <br />три с половиной года) сюда же навешивается еще и функция мини-ретранслятора с <br />реализованными поверх: (а) протоколом цифроналичной оплаты, (б) <br />протоколом автотрейдинга на предмет самого дешевого пути к другому абоненту.</p><p>И все. После этого стоимость существующей лапши на многих территориях <br />становится уж совсем отрицательной (сколько стоит ее выдрать и <br />переработать?).</p><p>Одна беда, СОРМ непонятно куда навесить в децентрализованной системе :)</p><p>&gt; &gt;&gt; А текущая правовая ситуация фактически вынуждает любую ГТС, которая вводит<br />&gt; &gt;&gt; в действие повременную оплату за телефон - иначе как прикажете вести<br />&gt; &gt;&gt; претензионную работу с абонентами? Единственный способ для ГТС обосновать<br />&gt; &gt;&gt; справедливость выставленного счета - предъявить абоненту список всех его<br />&gt; &gt;&gt; звонков.<br />&gt; <br />&gt; &gt; Забавно. Все равно, как если бы я, в подтверждение того, что Вы мне<br />&gt; &gt; должны, предъявил бы Вам свою запись в своей записной книжке...<br />&gt; <br />&gt; Примерно так. Только я еще что-то вроде нотариуса. (понятно, что совмещение<br />&gt; ролей не нравится, но за аудит платить придется)<br />&gt; <br />&gt; &gt; А фантомные записи о звонках и соответствующие ошибки биллинга - отдельная<br />&gt; &gt; проблема. Относительно небольшая для телефонных операторов и очень<br />&gt; &gt; серьезная для провайдеров Интернет.<br />&gt; <br />&gt; Здесь надо сначала понять причину их появления (как техническую, так и<br />&gt; экономическую). По-моему, как раз наоборот - провайдеру один-два &quot;лишних&quot;<br />&gt; диалаповских клиента картину сильно не испортят, если у него конечно не<br />&gt; десяток телефонов.</p><p>У &quot;Демоса&quot; уже проблема с вирусным сниффингом; поскольку о вирусе известно, <br />любой счет может быть мотивированно опротестован. С парольной идентификацией <br />это рано или поздно должно было произойти; все это знали, но никто ничего не <br />сделал. Я не знаю, плакать тут или смеяться.
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5119.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; Речь идет о Хайкомах.<br />&gt; С EWSD, которые идут на обычную связь, как дела обстоят, не знаю, но думаю,<br />&gt; что он там, родимый.<p>Вот так оно и происходит... Еще и бундесразведка у меня на телефоне висеть <br />будет.</p><p>&gt; &gt;&gt; Наш, отечественный :) СОРМ базируется на отдельных дополнительных модулях,<br />&gt; &gt;&gt; без которых не дадут сертификат Госкомсвязи (ГКС). Так вот, эти побочные<br />&gt; &gt;&gt; каналы дают возможность в принципе перехватывать всю информацию из АТС (а<br />&gt; &gt;&gt; она обязательно передается в процессе установления/разрыва соединеия).</p><p>&gt; &gt; Дадут возможность - кому? </p><p>&gt; Во-первых, производителю - это просто (с помощью их сорм). Во-вторых,<br />&gt; просто хакеру, т.к. &quot;слом&quot; АТС как максимум эквивалентен слому<br />&gt; соответствующей версии Unix (или подбору пароля). Кроме того, возможен<br />&gt; несанкционированый бизнес обслуживающего персонала, когда, например,<br />&gt; междугородку пускают &quot;за счет&quot; какого-нибудь клиента с большим объемом<br />&gt; трафика - это обычное переназначение вызова. </p><p>...и еще масса всяких вариантов. Но дело не в этом, а в том, чтобы <br />прорисовать &quot;правильную&quot; архитектуру и спокойно ее внедрять. Получая при <br />этом такую прибыль, инвестиция одного процента от которой в лоббинг позволит <br />закопать, например, ФСБ, метра на три в землю (что американские операторы, <br />судя по всему, медленно но верно делают с ФБР - см. <br /><a href="http://www.computerprivacy.org/">http://www.computerprivacy.org</a>). </p><p>Я так понимаю, что реальная проблема - в том, что все оборудование<br />буржуйское, а их трудно контролировать (хотя, почему бы &quot;Связьинвесту&quot; не<br />купить какого-нибудь западного производителя с потрохами?)</p><p>&gt; Говорят даже, что тот инженер, который звонит по межгороду за свой счет (из<br />&gt; дома) - плохо учил матчасть :)</p><p>Да, самое забавное, что сейчас у нас идут все те штучки из старых номеров <br />ФРИКа, от которых на Западе худо-бедно уже защитились.</p><p>&gt; &gt; Действительно, отдельный вопрос: как построить надежную сеть с<br />&gt; &gt; использованием оборудования, которому не доверяешь?<br />&gt; <br />&gt; Реализуемо с помощью средств защиты, которым доверяешь. (по отношению к<br />&gt; атакам извне, по крайней мере). А так, для винтеля, например - Аккорд или<br />&gt; Сикрет Нет.</p><p>Вот <em>их производителям</em> доверять у меня еще меньше оснований, чем Siemens :)</p><p>А, вообще, wintel - это тот случай, когда &quot;убить дешевле, чем вылечить&quot;.</p><p>&gt; &gt; Но, вроде бы, не в июле, не ГКС и не в СПб это начали обсуждать впервые.<br />&gt; <br />&gt; Елы-палы. Я говорю <em>про ГКС и проблемы защиты в АРС</em> (к тому же у нас в<br />&gt; стране).</p><p>Понятно, дикие люди в ГКС. Надо бы хоть издательско-просветительскую <br />программу составить, что ли...</p><p>&gt; &gt;&gt; Подход, который предлагает автор комментария - децентрализация - нереален,<br />&gt; &gt;&gt; т.к. 1) это неудобно в эксплуатации и не решает собственных задач самого<br />&gt; &gt;&gt; оператора,<br />&gt; <br />&gt; &gt; Вот операторы автоматных сетей-то дураки, не понимают, что своих задач не<br />&gt; &gt; решают. Надо бы им сказать, а то развернули многомилионный нереальный<br />&gt; &gt; бизнес...<br />&gt; <br />&gt; Ирония неуместна, т.к. в контексте речь шла о квартирных телефонах.</p><p>Но я пока не видел калькуляции, показывающей, что простая линия плюс <br />стоимость биллинга плюс издержки по претензиям к биллингу дешевле тупого <br />карточного телефона.</p><p>&gt; &gt;&gt; 2) нет защиты от недобросовестных абонентов,<br />&gt; <br />&gt; &gt; Отдельная задача, но решается она за счет архитектуры с предполагаемым<br />&gt; &gt; взаимным недоверием. Иначе будет &quot;защита сети от абонента&quot; со всеми теми<br />&gt; &gt; последствиями, которые мы уже месяц обсуждаем. (И с которыми столкнулись в<br />&gt; &gt; других классах сетей, например банкоматных).<br />&gt; <br />&gt; Нереально по экономическим причинам - повременку-то осилить не можем.</p><p>Конечно, одной бумаги на распечатки счетов сколько уйдет :)
+</p>
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="cyrillov.html">Александр Кириллов</a>,
+    31.07.1998<br/>в ответ на:
+        <a href="5096.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 27.07.1998)
+	</div>
+	<div class="text">
+		&gt;Насчет ОПУС и возможности извлечения информации из баз данных. Уважаемый<br />&gt;автор здесь практически обвинил МГТС в использовании своих возможностей <br />&gt;для сбора информации о абонентах в интересах третьих лиц и полном отсутствии<br />&gt;какой-либо нормативной (законодательной)базы, регулирующей этот вопрос.<p>Д.Старовойтов в чем то прав, обвинять МГТС в сборе информации об абонентах<br />в интересах третьих лиц несколько преждевременно из-за отсутствия видимых<br />доказательств. Однако, существуют доказательства того, что МГТС проделывает<br />это в своих собственных интересах. В передаче телеканала НТВ &quot;Суд идет&quot; по<br />вопросу правомерности введения повременной оплаты телефона, представитель<br />МГТС публично предъявил телевизионному суду распечатку переписки по e-mail<br />своих оппонентов, за что по закону он должен был взят под стражу прямо из<br />зала суда, даже если суд бутафорский. Самое удивительное в этой истории что<br />никто в студии даже не возмутился...</p><p>&gt;Подход, который предлагает автор комментария - децентрализация - нереален,<br />&gt;т.к. 1) это неудобно в эксплуатации и не решает собственных задач самого<br />&gt;оператора, 2) нет защиты от недобросовестных абонентов и 3) централизованные<br />&gt;функции уже есть и применяются для управления сетью, поэтому отменить их<br />&gt;и перейти на децентрализованный подход - нереально и нецелесообразно<br />&gt;(вперед к сигнальным кострам на холмах?:).</p><p>Весьма спорное утверждение, тем более, что против этих самых &quot;собственных<br />задач&quot; мы как раз и пытаемся выступать. А кто вообще первый сказал, что<br />АПУС должна быть интегрирована в телефонную сеть? А если представить себе<br />ее в виде надстройки, пристыкованной к стандартной телефонной сети на<br />уровне абонентской линии? Если сделать это корректно, то АПУС не станет<br />конфликтовать ни с ГТС ни с абонентом, к тому же шпионить не сможет...<br />
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr>
+    <td bgcolor="#7E0001"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+  <tr>
+    <td align="center" class="cop" bgcolor="#dedede"><a href="mailto:liberty@ice.ru">liberty@ice.ru</a></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="15" border="0"/></td>
+    <td align="center" class="cop" width="100%">Московский Либертариум, 1994-2020</td>
+  </tr>
+  <tr>
+    <td bgcolor="#0A557D"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td>
+    <td width="1" bgcolor="#9B9B9B"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+    <td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td>
+  </tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/5096 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 12:19:06 GMT -->
+</html>

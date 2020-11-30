@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/5136?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 16:31:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Конкуренция в телекоммуникационном секторе
+					- Регулирование и экономика СОРМ
+					- Фонд электронной границы
+					- Свободные телекоммуникации
+					- Дерегулирование
+				- Московский Либертариум
+  </title>
+	<meta name="robots" content="noindex"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : '5136',
+			template_id : 'skin_simple_material_t',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="5136" class="skin_simple_material_t ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td bgcolor="#EEEEEE"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td></tr>
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+</h1>
+</div>
+				<div class="pageText"><br />
+Сергей Нестерович 28 июля 1998г. пишет:<br />
+<br />
+&gt;&gt; Само по себе создание такой базы данных не
+нарушает ни чьих прав - если<br />
+&gt;&gt; правильно организовать хранение информации и
+доступ к ней. Ни у кого не<br />
+&gt;&gt; возникает возражений против того, что
+подобные базы данных ведет<br />
+&gt;&gt; &quot;междугородка&quot;.<br />
+<br />
+&gt;&gt; А текущая правовая ситуация фактически
+вынуждает любую ГТС, которая вводит<br />
+&gt;&gt; в действие повременную оплату за телефон -
+иначе как прикажете вести<br />
+&gt;&gt; претензионную работу с абонентами?
+Единственный способ для ГТС обосновать<br />
+&gt;&gt; справедливость выставленного счета -
+предъявить абоненту список всех его<br />
+&gt;&gt; звонков.<br />
+<br />
+&gt; Забавно. Все равно, как если бы я, в подтверждение
+того, что Вы мне должны,<br />
+&gt; предъявил бы Вам свою запись в своей записной
+книжке...<br />
+<br />
+<br />
+Примерно так. Только я еще что-то вроде нотариуса.
+(понятно, что совмещение<br />
+ролей не нравится, но за аудит платить придется)<br />
+<br />
+&gt; А фантомные записи о звонках и соответствующие
+ошибки биллинга - отдельная<br />
+&gt; проблема. Относительно небольшая для телефонных
+операторов и очень серьезная<br />
+&gt; для провайдеров Интернет.<br />
+<br />
+Здесь надо сначала понять причину их появления
+(как техническую, так и<br />
+экономическую). По-моему, как раз наоборот -
+провайдеру один-два &quot;лишних&quot;<br />
+диалаповских клиента картину сильно не испортят,
+если у него конечно не<br />
+десяток телефонов.<br />
+<br />
+&gt;&gt; &gt;Для того, чтобы создать систему
+повременного учета,не обладающую столь опасными<br />
+&gt;&gt; &gt;для общества побочными свойствами,
+необходимо выполнить всего лишь одно условие:<br />
+&gt;&gt; &gt;обработка информации о телефонных
+переговорах абонента должна производиться<br />
+&gt;&gt; &gt;локально, без возможности сопоставления ее
+с информацией о других<br />
+&gt;&gt;&gt; абонентах.<br />
+<br />
+&gt;&gt; Все хорошо, но техническая возможность
+создания таких устройств,<br />
+приемлемых<br />
+&gt;&gt; по стоимости появилась совсем не давно.<br />
+<br />
+&gt; Телефоны-автоматы существуют с 30-х гг., если я не
+ошибаюсь.<br />
+<br />
+Ага, но по стоимости они совсем не приемлемы в
+качестве абонентских<br />
+аппаратов. Потом, для них должна быть служба
+инкассации (аудита) или это<br />
+надо возложить на самого клиента, а это не очень
+тривиально для бабульки,<br />
+это дополнительная себестоимость -&gt;
+возрастание цены аппарата  и услуги.<br />
+<br />
+Вообще, философски, в технике всегда действуют,
+исходя из принципа разумной<br />
+достаточности (принцип Оккама). Вероятность того,
+что МГТС или какя-нибудь<br />
+другая ГТС возведет обман клиентов в ранг
+политики (бизнес-стратегии),<br />
+крайне невероятна. На этом пути ее ждет масса
+препятствий - УК<br />
+(мошенничество, превышение полномочий),
+Антимонопольный комитет,<br />
+соответсвующие местные власти, Госсвязьнадзор
+(цены на телефонию<br />
+унифицированы для всей страны), общественное
+мнение, конкурентная борьба и<br />
+пр (основные деньги МГТС берет с корпоративных
+клиентов, сиречь с<br />
+организаций, тут повременка уже давно, а на этом
+рынке в Москве конкуренция<br />
+жесткая).<br />
+    Вероятность же, что отдельный
+сотрудник сам что-то сделает &quot;в<br />
+индустриальном масштабе&quot;, есть, но
+относительно невелика, т.к. быстро<br />
+попадется, поскольку коллеги, скорее всего,
+заметят (уже много случаев было<br />
+в разных компаниях, это вычисляется, как правило,
+быстро).<br />
+<br />
+А конкретной бабуле теоретически есть дилемма:
+либо платить меньше с риском<br />
+оплатить еще кого-то (хакера/фрикера), либо
+платить заметно больше с заметно<br />
+меньшим риском. И немаловажный факт: проще
+обычного телефона прибор найти<br />
+сложно, это тоже влияет (смотрел за старенькой
+тещей - ей 76 лет, так<br />
+панасоник с трубкой она до конца твердо так и не
+освоила - когда достаточно<br />
+трубку просто снять с базы, а когда надо и
+кнопочку нажать - если трубка не<br />
+на базе, не говоря о каких=то других функциях, да и
+самому уже облом<br />
+разбираться и запоминать про все кнопочки на
+всей технике, которой пользуюсь<br />
+:).<br />
+<br />
+PS  Иллюстрацией к последней фразе, похоже,
+будет это письмо -<br />
+&quot;откквочивания&quot;-то нет! :( - только что
+заметил.<br /></div>
+	<div class="pageAnnotation" id="pageAnnotationBottom">
+		<div class="itemAuthor">Автор: <a href="dstar.html">Дмитрий Старовойтов</a></div>
+	<div class="itemDate">30.07.1998</div>
+	</div>
+	<div class="pageBlock">
+		<h2>Комментарии (1)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="5178/lib_thread.html">телефон-автомат VS SORMophone</a> |
+				<b><a href="5136/lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="5178/lib_thread.html">телефон-автомат VS SORMophone</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="5136.html">комментарий</a>
+        (<a href="dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt; Телефоны-автоматы существуют с 30-х гг., если я не ошибаюсь.<br />&gt; <br />&gt; Ага, но по стоимости они совсем не приемлемы в качестве абонентских<br />&gt; аппаратов. Потом, для них должна быть служба инкассации (аудита) или это<br />&gt; надо возложить на самого клиента, а это не очень тривиально для бабульки,<br />&gt; это дополнительная себестоимость -&gt; возрастание цены аппарата и услуги.<p>Да нет там радикальной разницы в стоимости. Цифровые жетоны сразу отгружаются <br />поставщику, без явной инкассации. Расходы на биллинг срезаются до стоимости <br />организации торговли карточками плюс чуть-чуть на аудит.</p><p>&gt; Вообще, философски, в технике всегда действуют, исходя из принципа<br />&gt; разумной достаточности (принцип Оккама). Вероятность того, что МГТС или<br />&gt; какя-нибудь другая ГТС возведет обман клиентов в ранг политики<br />&gt; (бизнес-стратегии), крайне невероятна. </p><p>Конечно. На практике телефонисты признают, что ошибки бывают, и соглашаются <br />удовлетворить жестко предъявленную претензию (у меня за 15 лет была одна <br />ошибка биллинга по межгороду, и еще один раз я представлял интересы девушки, <br />слишком нервной для общения с телефонистами, оба раза спорная строчка была <br />вычеркнута за пять минут).</p><p>&gt; А конкретной бабуле теоретически есть дилемма: либо платить меньше с риском<br />&gt; оплатить еще кого-то (хакера/фрикера), либо платить заметно больше с заметно<br />&gt; меньшим риском. </p><p>Есть дилемма. В некотором смысле, даже есть конкуренция. Если я подозреваю, <br />что на мне висят, я могу позвонить с автомата и снизить риск. </p><p>&gt; И немаловажный факт: проще обычного телефона прибор найти сложно, это тоже<br />&gt; влияет (смотрел за старенькой тещей - ей 76 лет, так панасоник с трубкой<br />&gt; она до конца твердо так и не освоила - когда достаточно трубку просто снять<br />&gt; с базы, а когда надо и кнопочку нажать - если трубка не на базе, не говоря<br />&gt; о каких=то других функциях, да и самому уже облом разбираться и запоминать<br />&gt; про все кнопочки на всей технике, которой пользуюсь :).</p><p>Со старенькими тещами - это отдельная проблема. Но у меня есть прибор проще <br />телефона. Это модем с дайалером: я кликаю в программной записной книжке <br />&quot;Старовойтов&quot;, и даже номер помнить не надо (и не помню). </p><p>А у приятеля моего к такой штуке еще войс контрол приделан: откинется он в <br />кресле и позовет томно: &quot;Ле-но-чка...&quot;. Через минуту Леночка ему из динамика <br />заспанным голосом: &quot;Але, кто меня будит в два часа ночи?..&quot;<br />
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  <tr><td align="center" class="cop">Московский Либертариум, 1994-2020</td></tr>
+  <tr><td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/5136?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 16:31:35 GMT -->
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from libertarium.ru/5119/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Архитектура АПУС (автоматизированного повременного учета стоимости связи)
+					- Конкуренция в телекоммуникационном секторе
+					- Регулирование и экономика СОРМ
+					- Фонд электронной границы
+					- Свободные телекоммуникации
+					- Дерегулирование
+				- Московский Либертариум
+  </title>
+	<meta name="robots" content="noindex"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="../libertarium/feed_rss2" />
+	<script src="http://libertarium.ru/helpers/cms/prototype/prototype.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/helpers/cms/behaviour/behaviour.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/skin_simple_design_lib/skin_simple_hacks.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_content.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium_items.css" type="text/css"/>
+<style>
+		LI.topic { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		LI.article { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		LI.external { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		LI.binary { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		LI.gallery { list-style-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		LI.book { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		LI.news { list-style-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+</style>
+	<script language="javascript" type="text/javascript">
+		var Cmw = {
+			host_name : 'libertarium.ru',
+			url_prefix : 'http://libertarium.ru',
+			site_id : 'libertarium',
+			item_id : '5119',
+			template_id : 'lib_allcomments',
+			user_id : ''
+		}
+	</script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_utilities.js" type="text/javascript"></script>
+<script src="http://libertarium.ru/pictures/cms_design_lib/cms_behaviours.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_styles.css" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/cms_design_lib/cms_print.css" media="print" type="text/css"/>
+<link rel="stylesheet" href="http://libertarium.ru/pictures/lib_design_lib/libertarium.css" type="text/css"/>
+<style>
+		.topic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/topic.gif'); }
+		.article { background-image: url('http://libertarium.ru/pictures/lib_design_lib/article.gif'); }
+		.external { background-image: url('http://libertarium.ru/pictures/lib_design_lib/external.gif'); }
+		.binary { background-image: url('http://libertarium.ru/pictures/lib_design_lib/binary.gif'); }
+		.gallery { background-image: url('http://libertarium.ru/pictures/skin_simple_design_lib/gallery.gif'); }
+		.book { background-image: url('http://libertarium.ru/pictures/lib_design_lib/book.gif'); }
+		.news { background-image: url('http://libertarium.ru/pictures/lib_design_lib/news.gif'); }
+	.replic { background-image: url('http://libertarium.ru/pictures/lib_design_lib/replic.gif'); }
+</style>
+</head>
+<body id="5119" class="lib_allcomments ">
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+  <td background="http://libertarium.ru/pictures/lib_design_lib/back1.gif" width="100%"><img width="200" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="8" border="0"/></td>
+</tr>
+<tr>
+  <td width="100%" valign="bottom" bgcolor="#E0E0E0">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="padding-left: 60px" valign="bottom"><a href="../index.html"><img width="53" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo_bear2.gif" class="db" height="60" border="0"/></a></td>
+      <td style="padding-right: 30px" align="right"><a href="../index.html"><img width="211" alt="Либертариум" src="http://libertarium.ru/pictures/lib_design_lib/logo1.gif" class="db" height="62" border="0"/></a></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td bgcolor="#EEEEEE"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="1" border="0"/></td></tr>
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEEEEE">
+<tr>
+  <td valign="top" width="100%">
+    <div class="pageHeader replic clear">
+	<h1>
+<a href="../5119.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> / Все комментарии
+</h1>
+</div>
+	<div class="pageBlock">
+		<h2>Комментарии (4)</h2>
+			<div class="discussionLastThreads"><b>Последние темы:</b>
+				<a href="../5177/lib_thread.html">трейдинг VS биллинг</a> | <a href="../5176/lib_thread.html">Угрозы со стороны производителей</a> | <a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a> |
+				<b><a href="lib_allthreads.html">Все темы</a></b>
+			</div>
+			<ul class="itemsList">
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5119.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt; Дело не в нормативной базе, дело в технической инфраструктуре. То же<br />&gt; &gt; самое, что показывает обсуждение СОРМ - есть нормативная база (Конституция,<br />&gt; &gt; Закон о связи), которая искажается и делается неконсистентной.<br />&gt; &gt; Закон можно поменять за месяц, сложные технические инфраструктуры<br />&gt; &gt; создаются годами и служат десятилетиями.<br />&gt; <br />&gt; о чем и я. Инфраструктура уже сложилась, и карточки, к сожалению, опоздали к<br />&gt; моменту появления цифровых АТС. <p>Ну тогда все, конец света :) Раз инфраструктура уже сложилась...</p><p>Если серьезно, с какой скоростью может расти отрасль телекома, оставаясь <br />рентабельной? Я думаю, для России сейчас и в ближайшем будущем - в 1.2 <br />- полтора раза в год по номерному пространству. И сколько через пять лет <br />останется &quot;существующей инфраструктуры&quot;?</p><p>&gt; Кроме того, подавляющее большинство претензий к расчетам не имеет, в<br />&gt; основном претензии связаны с &quot;секс-телефонами&quot; и пр., когда звонят дети или<br />&gt; люди не понимают или не обращают внимание, что звонок - международный.</p><p>Это и есть порок биллинга, когда в конце достаточно длительного периода <br />обнаруживается что-нибудь такое. Обратите внимание, что, звоня с карточки, я <br />ограничиваю <em>все</em> свои риски суммой на карточке. Все, от ошибок до враждебных <br />атак. Это - правильный протокол (по Андерсону, см. обсуждение с Леонтьевым).</p><p>&gt; &gt; Я почти никого не знаю в МГТС, и готов априорно допустить, что там<br />&gt; &gt; работают честные и порядочные люди. Однако ставить надежность системы в<br />&gt; &gt; целом в зависимость от законопослушности и порядочности человека,<br />&gt; &gt; работающего на том или ином функциональном месте - по меньшей мере странно.<br />&gt; <br />&gt; я и не ставлю, у меня профессия как раз по этой части (информационная<br />&gt; безопасность).</p><p>Спасибо за солидаризацию ! :)
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="../5176/lib_thread.html">Угрозы со стороны производителей</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5119.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt; Вот это - действительно отдельный важный содержательный вопрос. Его можно<br />&gt; &gt; конструктивно обсуждать.<br />&gt; <br />&gt; &gt; (Не сочтите за персональный наезд, но если бы известное нам ведомство не<br />&gt; &gt; закупало в таких страшных количествах технику для ответственной связи у<br />&gt; &gt; Siemens, жить было бы много легче...)<br />&gt; <br />&gt; Сименс это как раз отдал, и этот блок выкинули, <p>&quot;Семен Михалыч два пулемета отдал, подумал, и третий на всякий случай<br />оставил&quot;. Это байка такая была, как Буденный от чекистов отстреливался :)<br />Сименс хитрый... :)
+</p>
+	</div>
+</li>
+<li class="listElement1 replic">
+	<p class="itemTitle">
+		<a href="../5177/lib_thread.html">трейдинг VS биллинг</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5119.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; &gt;&gt; Выход в другом - оснащать и канал ОКС-7, и АРС нормальными комплексными<br />&gt; &gt;&gt; системами защиты, что мы и предложили на конференции.<br />&gt; <br />&gt; &gt; Не понимаю, почему &quot;другое&quot;? Ну, инкапсулирую я протоколы Internet или<br />&gt; &gt; инкапсулирую ОКС-7, какая разница? Только что второе сложнее...<br />&gt; <br />&gt; Речь шла о том, что защита от атак на АРС <em>извне</em> может быть либо с<br />&gt; помощью доверенных клиентских устройств, либо с помощью защиты самой АРС и<br />&gt; системы управления. А она здесь выполняет именно рольмаршрутизации и пр.,<br />&gt; поэтому децентрализованная телефонная сеть быть не может. Именно это я имел<br />&gt; в виду, когда писал о кострах и пр.<p>Не может-то не может, да вот только недавно было презентировано такое <br />нехитрое устройство: сотовый телефон, который может коннектиться с другим <br />сотовым телефоном, если рядом (а если не рядом, выходит на соту; в <br />принципе, если совсем не рядом, должен выходить на спутник).</p><p>При увеличении производительности embedded-процессоров еще на порядок (это <br />три с половиной года) сюда же навешивается еще и функция мини-ретранслятора с <br />реализованными поверх: (а) протоколом цифроналичной оплаты, (б) <br />протоколом автотрейдинга на предмет самого дешевого пути к другому абоненту.</p><p>И все. После этого стоимость существующей лапши на многих территориях <br />становится уж совсем отрицательной (сколько стоит ее выдрать и <br />переработать?).</p><p>Одна беда, СОРМ непонятно куда навесить в децентрализованной системе :)</p><p>&gt; &gt;&gt; А текущая правовая ситуация фактически вынуждает любую ГТС, которая вводит<br />&gt; &gt;&gt; в действие повременную оплату за телефон - иначе как прикажете вести<br />&gt; &gt;&gt; претензионную работу с абонентами? Единственный способ для ГТС обосновать<br />&gt; &gt;&gt; справедливость выставленного счета - предъявить абоненту список всех его<br />&gt; &gt;&gt; звонков.<br />&gt; <br />&gt; &gt; Забавно. Все равно, как если бы я, в подтверждение того, что Вы мне<br />&gt; &gt; должны, предъявил бы Вам свою запись в своей записной книжке...<br />&gt; <br />&gt; Примерно так. Только я еще что-то вроде нотариуса. (понятно, что совмещение<br />&gt; ролей не нравится, но за аудит платить придется)<br />&gt; <br />&gt; &gt; А фантомные записи о звонках и соответствующие ошибки биллинга - отдельная<br />&gt; &gt; проблема. Относительно небольшая для телефонных операторов и очень<br />&gt; &gt; серьезная для провайдеров Интернет.<br />&gt; <br />&gt; Здесь надо сначала понять причину их появления (как техническую, так и<br />&gt; экономическую). По-моему, как раз наоборот - провайдеру один-два &quot;лишних&quot;<br />&gt; диалаповских клиента картину сильно не испортят, если у него конечно не<br />&gt; десяток телефонов.</p><p>У &quot;Демоса&quot; уже проблема с вирусным сниффингом; поскольку о вирусе известно, <br />любой счет может быть мотивированно опротестован. С парольной идентификацией <br />это рано или поздно должно было произойти; все это знали, но никто ничего не <br />сделал. Я не знаю, плакать тут или смеяться.
+</p>
+	</div>
+</li>
+<li class="listElement0 replic">
+	<p class="itemTitle">
+		<a href="../l_sorm_kir1/lib_thread.html">Архитектура АПУС (автоматизированного повременного учета стоимости связи)</a>
+	</p>
+  <div class="itemAuthor">
+    <a href="../maksim.html">Максим Отставнов</a>,
+    30.07.1998<br/>в ответ на:
+        <a href="../5119.html">комментарий</a>
+        (<a href="../dstar.html">Дмитрий Старовойтов</a>, 30.07.1998)
+	</div>
+	<div class="text">
+		&gt; Речь идет о Хайкомах.<br />&gt; С EWSD, которые идут на обычную связь, как дела обстоят, не знаю, но думаю,<br />&gt; что он там, родимый.<p>Вот так оно и происходит... Еще и бундесразведка у меня на телефоне висеть <br />будет.</p><p>&gt; &gt;&gt; Наш, отечественный :) СОРМ базируется на отдельных дополнительных модулях,<br />&gt; &gt;&gt; без которых не дадут сертификат Госкомсвязи (ГКС). Так вот, эти побочные<br />&gt; &gt;&gt; каналы дают возможность в принципе перехватывать всю информацию из АТС (а<br />&gt; &gt;&gt; она обязательно передается в процессе установления/разрыва соединеия).</p><p>&gt; &gt; Дадут возможность - кому? </p><p>&gt; Во-первых, производителю - это просто (с помощью их сорм). Во-вторых,<br />&gt; просто хакеру, т.к. &quot;слом&quot; АТС как максимум эквивалентен слому<br />&gt; соответствующей версии Unix (или подбору пароля). Кроме того, возможен<br />&gt; несанкционированый бизнес обслуживающего персонала, когда, например,<br />&gt; междугородку пускают &quot;за счет&quot; какого-нибудь клиента с большим объемом<br />&gt; трафика - это обычное переназначение вызова. </p><p>...и еще масса всяких вариантов. Но дело не в этом, а в том, чтобы <br />прорисовать &quot;правильную&quot; архитектуру и спокойно ее внедрять. Получая при <br />этом такую прибыль, инвестиция одного процента от которой в лоббинг позволит <br />закопать, например, ФСБ, метра на три в землю (что американские операторы, <br />судя по всему, медленно но верно делают с ФБР - см. <br /><a href="http://www.computerprivacy.org/">http://www.computerprivacy.org</a>). </p><p>Я так понимаю, что реальная проблема - в том, что все оборудование<br />буржуйское, а их трудно контролировать (хотя, почему бы &quot;Связьинвесту&quot; не<br />купить какого-нибудь западного производителя с потрохами?)</p><p>&gt; Говорят даже, что тот инженер, который звонит по межгороду за свой счет (из<br />&gt; дома) - плохо учил матчасть :)</p><p>Да, самое забавное, что сейчас у нас идут все те штучки из старых номеров <br />ФРИКа, от которых на Западе худо-бедно уже защитились.</p><p>&gt; &gt; Действительно, отдельный вопрос: как построить надежную сеть с<br />&gt; &gt; использованием оборудования, которому не доверяешь?<br />&gt; <br />&gt; Реализуемо с помощью средств защиты, которым доверяешь. (по отношению к<br />&gt; атакам извне, по крайней мере). А так, для винтеля, например - Аккорд или<br />&gt; Сикрет Нет.</p><p>Вот <em>их производителям</em> доверять у меня еще меньше оснований, чем Siemens :)</p><p>А, вообще, wintel - это тот случай, когда &quot;убить дешевле, чем вылечить&quot;.</p><p>&gt; &gt; Но, вроде бы, не в июле, не ГКС и не в СПб это начали обсуждать впервые.<br />&gt; <br />&gt; Елы-палы. Я говорю <em>про ГКС и проблемы защиты в АРС</em> (к тому же у нас в<br />&gt; стране).</p><p>Понятно, дикие люди в ГКС. Надо бы хоть издательско-просветительскую <br />программу составить, что ли...</p><p>&gt; &gt;&gt; Подход, который предлагает автор комментария - децентрализация - нереален,<br />&gt; &gt;&gt; т.к. 1) это неудобно в эксплуатации и не решает собственных задач самого<br />&gt; &gt;&gt; оператора,<br />&gt; <br />&gt; &gt; Вот операторы автоматных сетей-то дураки, не понимают, что своих задач не<br />&gt; &gt; решают. Надо бы им сказать, а то развернули многомилионный нереальный<br />&gt; &gt; бизнес...<br />&gt; <br />&gt; Ирония неуместна, т.к. в контексте речь шла о квартирных телефонах.</p><p>Но я пока не видел калькуляции, показывающей, что простая линия плюс <br />стоимость биллинга плюс издержки по претензиям к биллингу дешевле тупого <br />карточного телефона.</p><p>&gt; &gt;&gt; 2) нет защиты от недобросовестных абонентов,<br />&gt; <br />&gt; &gt; Отдельная задача, но решается она за счет архитектуры с предполагаемым<br />&gt; &gt; взаимным недоверием. Иначе будет &quot;защита сети от абонента&quot; со всеми теми<br />&gt; &gt; последствиями, которые мы уже месяц обсуждаем. (И с которыми столкнулись в<br />&gt; &gt; других классах сетей, например банкоматных).<br />&gt; <br />&gt; Нереально по экономическим причинам - повременку-то осилить не можем.</p><p>Конечно, одной бумаги на распечатки счетов сколько уйдет :)
+</p>
+	</div>
+</li>
+			</ul>
+	</div>
+  </td>
+</tr>
+</table>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="#eeeeee">
+  <tr><td bgcolor="#7E0001"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  <tr><td align="center" class="cop">Московский Либертариум, 1994-2020</td></tr>
+  <tr><td bgcolor="#0A557D"><img width="1" alt="" src="http://libertarium.ru/pictures/lib_design_lib/0.gif" class="db" height="3" border="0"/></td></tr>
+  </table>
+</body>
+
+<!-- Mirrored from libertarium.ru/5119/lib_allcomments?PRINT_VIEW=YES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Aug 2020 18:39:11 GMT -->
+</html>
