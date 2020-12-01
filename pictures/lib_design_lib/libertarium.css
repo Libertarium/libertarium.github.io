@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+	padding: 0;
+	background-color: #eeeeee;
+}
+.common {
+	color : #000000;
+	font-size : 12px;
+}
+.mic
+{
+font-family: Tahoma, Verdana, Arial, Helvetica, Sans-Serif;
+font-size: 7pt;
+font-weight: normal;
+text-decoration: none;
+color: #000000;
+}
+.zag1, A.zag1{
+	color : #800003;
+	font-size : 12px;
+	font-weight : 600;
+	text-decoration : none;
+}
+A.zag1:hover{
+	text-decoration : underline;
+}
+.zag2, A.zag2{
+	color : #800003;
+	font-size : 14px;
+	font-weight : bold;
+	text-decoration: none;
+}
+A.zag2:hover{
+	text-decoration: underline;
+}
+.LeftMargin, .Header2, .Header3 {
+	margin-left: 30px;
+}
+.Header2, A.Header2, .Header2 A {
+	color : #800003;
+	font-size : 14px;
+	font-weight : 600;
+	text-decoration:none;
+}
+A.Header2:hover, .Header2 A:hover {
+	text-decoration:underline;
+}
+
+.menuHeader {
+ 	font-size : 14px;
+	color : #800003;
+	font-weight: 600;
+	padding: 5px 5px 5px 10px;
+  border-top: 3px solid #7e0001;
+	border-bottom: 3px solid #7e0001;
+}
+
+.pageHeader {
+	border-top: 3px solid #7e0001;
+	background-color: #eeeeee;
+	background-position: 30px 5px;
+	background-repeat: no-repeat;
+	padding: 5px 30px 5px 60px;
+}
+.pageBlock .itemsList {
+	border-top: 0;
+}
+
+.pageHeader H1, .pageHeader H2 {
+	font-size : 14px;
+	color : #800003;
+	font-weight: 600;
+	margin: 0;
+	float: left;
+	width: 75%;
+}
+.pageBlock H2 {
+  font-size : 14px;
+  color : #800003;
+  font-weight: 600;
+  margin: 0;
+	padding: 5px 30px 5px 60px;
+}
+
+.pageHeader H1 A, .pageHeader H1 A:visited, 
+.pageHeader H2 A, .pageHeader H2 A:visited, 
+.menuHeader a, .menuHeader a:visited {
+  color : #800003;
+	text-decoration: none;
+}
+
+.pageHeader H1 A:hover, .pageHeader H2 A:hover, .menuHeader a:hover {
+  color : #800003;
+	text-decoration: underline;
+}
+
+.pageHeader .itemInfo {
+  background-color: #dedede;
+	text-align: justify;
+}
+
+.pageHeader .itemIcon {
+  padding-left: 30px;
+}
+
+div.pageDelimiter {
+	width: 100%;
+	height: 3px;
+	background-color: #7e0001;
+}
+
+.discussionLastThreads {
+  padding: 10px 60px;
+}
+
+.discussionLastThreads b {
+  text-transform: uppercase;
+}
+
+.zag3, A.zag3{
+	color : #105080;
+	font-size : 12px;
+	font-weight : 600;
+	letter-spacing : -1px;
+	text-decoration:none;
+}
+A.zag3:hover{
+	text-decoration:underline;
+}
+.Header3, A.Header3 {
+	color : #105080;
+	font-size : 12px;
+	font-weight : 600;
+	letter-spacing : -1px;
+	text-decoration:none;
+}
+A.Header3:hover{
+	text-decoration:underline;
+}
+.date{
+	color : #0A537E;
+	font-size : 12px;
+}
+.engversion{
+	color : #ffffff;
+	font-size : 12px;
+	font-weight : 600;
+	text-decoration : none;
+}
+.engversion:hover {
+	color : #ffffff;
+	font-size : 12px;
+	font-weight : 600;
+	text-decoration : none;
+}
+td.menu1 {
+	color : #ffffff;
+	font-size : 12px;
+}
+ A.menu1, A.menu1:visited, .menu1 A, .menu1 A:visited {
+  color : #ffffff;
+	text-decoration:none;
+}
+A.menu1:hover, .menu1 A:hover {
+  color : #ffffff;
+	text-decoration : underline;
+}
+
+#authorIdLink {
+  font-weight: bold;
+  color : #ffffff;
+}
+
+.menu2, A.menu2 {
+	color : #105080;
+	font-size : 12px;
+	text-decoration : none;
+}
+A.menu2:hover, A:hover{
+	text-decoration : underline;
+}
+.menu3, A.menu3{
+	color : #000000;
+	font-size : 12px;
+	text-decoration : none;
+}
+A.menu3:hover{
+	text-decoration : underline;
+}
+.cop{
+	color : #000000;
+	font-size : 11px;
+	text-decoration : none;
+	padding: 5px;
+}
+.cop:hover {
+	color : #000000;
+	font-size : 11px;
+	text-decoration : underline;
+}
+.menuItemIcon {
+  width: 25px;
+	text-align: right;
+}
+
+.menuItemTitle {
+  color: #000000;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+.menuItemTitle a, .menuItemTitle a:visited {
+  color: #000000;
+  text-decoration: none;
+}	
+
+.menuItemTitle a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.itemStat, .statInfo {
+  padding: 5px 30px 5px 0;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.continueTable {
+  border-top: 3px solid #7e0001;
+}
+
+.continueTable td {
+  padding: 5px 30px;
+}
+
+.pageText {
+  padding: 5px 30px 5px 60px;
+	text-align: justify;
+	border-top: 3px solid #7e0001; 
+}
+
+.itemInfo div.bookDownload {
+  margin-top: 5px;
+	font-weight: bold;
+}
+
+/* Misc */
+
+.db {
+	display: block;
+	}
+
+/* CMS styles */
+
+.form .pageHeader {
+	padding-left: 20px;
+	}
+TABLE.formTable TD.formLabel {
+	padding-left: 20px;
+	padding-right: 0;
+	width: 160px;
+	}
+TABLE.formTable TD.formField,
+TABLE.formTable TD.formComment {
+	padding-right: 20px;
+	padding-left: 20px;
+	width: auto;
+	}
+TABLE.formTable TD.formComment {
+	color: #666;
+	}
+

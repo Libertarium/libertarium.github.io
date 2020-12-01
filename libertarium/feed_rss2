@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rss [
+	<!ENTITY % HTMLlat1 PUBLIC
+  	"-//W3C//ENTITIES Latin 1 for XHTML//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent">
+	%HTMLlat1;
+
+	<!ENTITY % HTMLspecial PUBLIC
+  	"-//W3C//ENTITIES Special for XHTML//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent">
+	%HTMLspecial;
+	
+	<!ENTITY % HTMLsymbol PUBLIC
+  	"-//W3C//ENTITIES Symbols for XHTML//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml-symbol.ent">
+	%HTMLsymbol;
+]>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+	<title>Московский Либертариум</title>
+	<description></description>
+	<language>ru</language>
+	<link>http://libertarium.ru</link> 
+	<copyright>Copyright 2020 Московский Либертариум</copyright>
+	
+		<managingEditor>ailev@asmp.msk.su</managingEditor>
+	
+		<managingEditor>borislvin@mail.ru</managingEditor>
+	
+		<managingEditor>fedor_zuev@mail.ru</managingEditor>
+	
+		<managingEditor>vic5784@gmail.com</managingEditor>
+	
+		<managingEditor>vveg@ice.ru</managingEditor>
+	
+	
+	<pubDate/>
+	<lastBuildDate/>
+	
+		<image>
+			<title>Московский Либертариум</title>
+			<link>http://libertarium.ru</link> 
+			<url>http://libertarium.ru/pictures/libertarium/logo.gif</url>
+		</image>
+	
+	
+		<item>  
+			<title>Новость "Либертариуму 25 лет"</title>
+			<link>http://libertarium.ru/165026</link>
+			
+				<description>Московскому Либертариуму 4 августа 2019 года исполнилось 25 лет. Поздравляем! Вода в аквариуме, свобода в Либертариуме!</description>
+			
+			
+			
+			<pubDate/>
+			<guid>165026</guid>
+		</item>
+	
+		<item>  
+			<title>Текст "Запрет вертикальной интеграции увеличивает риски инвестиций в электроэнергетику."</title>
+			<link>http://libertarium.ru/riskivertinterg</link>
+			
+			
+				<author>yukuz@ice.ru</author>
+			
+			
+			<pubDate/>
+			<guid>riskivertinterg</guid>
+		</item>
+	
+		<item>  
+			<title>Ссылка "Проект &quot;Электросмысл&quot;. Приложение 1 &quot;Некоторые важнейшие события&quot;."</title>
+			<link>http://libertarium.ru/59537</link>
+			
+				<description>Факты, имена, названия, проблемы и события, которые помогают или могут помочь полнее представить развитие отрасли от момента ее возникновения, и которые не являются предметом публичного внимания. Главными объектами интереса стали действия предпринимателей, создавших электроэнергетику. Как и все другие виды бизнеса, электроэнергетика возникла как следствие предпринимательского расчета,  осознанного риска и капиталистического применения ресурсов</description>
+			
+			
+			
+			<pubDate/>
+			<guid>59537</guid>
+		</item>
+	
+		<item>  
+			<title>Ссылка "Проект &quot;Электросмысл&quot;. Исторический очерк."</title>
+			<link>http://libertarium.ru/59536</link>
+			
+				<description>Очерк экономической истории развития электроэнергетики.</description>
+			
+			
+			
+			<pubDate/>
+			<guid>59536</guid>
+		</item>
+	
+		<item>  
+			<title>Ссылка "Проект &quot;Электросмысл&quot;. Теоретический очерк."</title>
+			<link>http://libertarium.ru/59534</link>
+			
+				<description>Оценка концепций реформирования электроэнергетики, имеющихся на момент подготовки Отчета по проекту &quot;Электросмысл&quot; (апрель 2001 г.) и комментарии к ним. Не приводятся сами концепции, но дан комментарий, представляющий собой одновременно оценку предложенных концепций и попытку восстановить логику и базовые установки разработчиков.</description>
+			
+			
+			
+			<pubDate/>
+			<guid>59534</guid>
+		</item>
+	
+		<item>  
+			<title>Книга "Бруцкус Борис Давидович. Проблемы народного хозяйства при социалистическом строе"</title>
+			<link>http://libertarium.ru/9037</link>
+			
+			
+			
+			<pubDate/>
+			<guid>9037</guid>
+		</item>
+	
+		<item>  
+			<title>Текст "Предисловие  к книге Чандрана Кукатаса &quot;Либеральный архипелаг&quot;"</title>
+			<link>http://libertarium.ru/4526</link>
+			
+			
+				<author>novikov_vadim@mail.ru</author>
+			
+			
+			<pubDate/>
+			<guid>4526</guid>
+		</item>
+	
+		<item>  
+			<title>Книга "Что же такое этот проклятый либерализм?"</title>
+			<link>http://libertarium.ru/1907</link>
+			
+				<description>Немного о социализме, капитализме, протекционизме, интервенционизме, свободном рынке и конкуренции</description>
+			
+			
+				<author></author>
+			
+			
+			<pubDate/>
+			<guid>1907</guid>
+		</item>
+	
+		<item>  
+			<title>Текст "Джеральд Ф. Гаус. Многообразие видов всеобъемлющего либерализма"</title>
+			<link>http://libertarium.ru/1770</link>
+			
+				<description>перевод под ред. Вадима Новикова</description>
+			
+			
+				<author></author>
+			
+			
+			<pubDate/>
+			<guid>1770</guid>
+		</item>
+	
+		<item>  
+			<title>Текст "Эрик Мак, Джеральд Ф. Гаус. Классический либерализм и либертарианство: либеральная традиция"</title>
+			<link>http://libertarium.ru/1642</link>
+			
+				<description>перевод под ред. /mgrig(Вадима Новикова)</description>
+			
+			
+				<author></author>
+			
+			
+			<pubDate/>
+			<guid>1642</guid>
+		</item>
+	  
+</channel>
+</rss>
+
+
+
